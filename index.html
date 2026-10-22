@@ -1,0 +1,1421 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cổng đăng ký và nộp bản thảo khoa học – IAS Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300..800&family=Source+Code+Pro:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,200..400,0..1,0&display=block">
+<style>
+:root{--bg:#f6f8fb;--card:#ffffff;--alt:#f2f5f9;--line:#dce4ed;--line2:#e9eef4;--fg:#172b4d;--head:#17365d;--muted:#5d6b82;--link:#006bb6;--link-d:#005493;--link-soft:#edf6fc;--link-line:#b9d8ef;--ok:#237a52;--ok-soft:#f3fbf7;--warn:#996500;--warn-soft:#fff8e6;--bad:#b42318;--bad-soft:#fff5f4;--sans:'Source Sans 3',system-ui,-apple-system,sans-serif;--mono:'Source Code Pro',ui-monospace,monospace;--shadow:0 2px 8px #17365d08}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--sans);min-height:100vh;display:flex;flex-direction:column}
+::selection{background:#d6ebfb;color:#12345a}
+a{color:var(--link);text-underline-offset:3px}
+h1,h2,h3,h4{font-family:var(--sans);letter-spacing:-.02em;color:var(--head);font-weight:650;line-height:1.2;margin:0}
+h1{font-size:clamp(24px,3vw,30px)}h2{font-size:22px}h3{font-size:18px}h4{font-size:16px}
+.mono{font-family:var(--mono);font-size:12.5px}.muted{color:var(--muted)}.small{font-size:13px}.grow{flex:1}
+.ms{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:20px;line-height:1;display:inline-block;width:1em;height:1em;overflow:hidden;vertical-align:-.2em;flex:none}
+.util{background:#f0f4f8;border-bottom:1px solid #dbe4ed;color:#53677f;font-size:12.5px}
+.util .in{max-width:1160px;margin:0 auto;min-height:38px;padding:4px 24px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.util b{font-weight:600;font-size:12px;color:#334e68}
+.util a,.util button.lnk{color:#334e68;text-decoration:none;border:0;background:none;font:500 12.5px var(--sans);cursor:pointer;display:inline-flex;gap:5px;align-items:center;padding:5px 6px;border-radius:5px}
+.util a:hover,.util button.lnk:hover{background:#fff}
+.seg{display:flex;gap:4px;align-items:center}
+.seg button{border:1px solid transparent;background:none;color:#53677f;padding:4px 8px;border-radius:4px;font:500 12px var(--sans);cursor:pointer}
+.seg button[aria-pressed=true]{background:#fff;color:#005ea8;border-color:var(--link-line);box-shadow:0 1px 2px #12345a0d}
+.site{background:#fff;border-bottom:3px solid var(--link);box-shadow:0 2px 7px #17365d08}
+.site .in{max-width:1160px;margin:0 auto;padding:12px 24px 0;display:flex;flex-direction:column;gap:8px}
+.toprow{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 16px}
+.brand{text-decoration:none;color:var(--fg);display:flex;align-items:center;gap:14px;min-height:46px}
+.brand img{height:38px;max-height:42px;width:auto;display:block;border-radius:4px;object-fit:contain}
+.brand em{font:500 13px var(--sans);font-style:normal;color:#526984;border-left:1px solid var(--line);padding-left:12px}
+.acct{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+nav{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:center}
+nav a{font-size:14px;color:#425873;padding:10px 2px 12px;border-bottom:3px solid transparent;text-decoration:none;font-weight:500;display:flex;gap:6px;align-items:center;margin-bottom:-3px}
+nav a .ms{font-size:18px;color:#6b8098}nav a:hover{color:var(--fg)}nav a.on{color:#005ea8;border-bottom-color:var(--link);font-weight:600}nav a.on .ms{color:var(--link)}
+.cnt{background:var(--link);color:#fff;border-radius:99px;font-size:11px;font-weight:700;min-width:18px;height:18px;padding:0 5px;display:inline-flex;align-items:center;justify-content:center}
+main{max-width:1160px;width:100%;margin:0 auto;padding:26px 24px 60px;display:flex;flex-direction:column;gap:20px;flex:1}
+footer{background:#edf2f7;border-top:1px solid #d8e1eb;margin-top:auto}
+footer .in{max-width:1160px;margin:0 auto;padding:14px 24px;color:#60748b;font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+.head{display:flex;flex-direction:column;gap:6px}
+.lead{font-size:15px;line-height:1.5;color:#53677f;max-width:75ch;margin:0}
+.crumb{font-size:13px;color:#657890;display:flex;gap:4px;align-items:center}.crumb a{text-decoration:none}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 20px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
+.box{background:#f7f9fc;border:1px solid #e0e7ef;border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.row{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}.row.sp{justify-content:space-between;align-items:center}
+.stack{display:flex;flex-direction:column;gap:8px}
+.note{background:var(--link-soft);border-left:4px solid #1684c7;border-radius:0 6px 6px 0;padding:10px 14px;color:#294d6b;font-size:13.5px;display:flex;gap:10px;align-items:flex-start}
+.note .ms{color:var(--link)}.note.warn{background:var(--warn-soft);border-left-color:#d99a1b;color:#6b4a00}.note.warn .ms{color:var(--warn)}.note.ok{background:var(--ok-soft);border-left-color:#39845e;color:#1d5a3a}.note.ok .ms{color:var(--ok)}
+.err{background:var(--bad-soft);border-left:4px solid #c9362b;border-radius:0 6px 6px 0;padding:10px 14px;font-size:13.5px;color:#8f1d14}.err ul{margin:4px 0 0;padding-left:18px}
+.st{display:inline-flex;gap:6px;align-items:center;font-size:13px;font-weight:600}
+.st i{width:8px;height:8px;border-radius:50%;background:#8a97aa}.st.info i{background:#3f8fc8}.st.ok i{background:var(--ok)}.st.warn i{background:#d99a1b}.st.bad i{background:#c9362b}
+.tag{display:inline-block;border:1px solid #d8e1eb;background:#f7f9fc;border-radius:4px;padding:1px 7px;font-size:11.5px;color:var(--muted);white-space:nowrap}
+.tag.warn{border-color:#e6c36a;color:var(--warn);background:var(--warn-soft)}.tag.bad{border-color:#e5b9b5;color:var(--bad);background:var(--bad-soft)}.tag.ok{border-color:#b8ddcb;color:var(--ok);background:var(--ok-soft)}.tag.info{border-color:var(--link-line);color:#005ea8;background:var(--link-soft)}
+.btn{font:600 13.5px var(--sans);border:1px solid #b8c7d8;background:#fff;color:#17446b;padding:7px 14px;border-radius:6px;min-height:38px;gap:6px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:background .15s,border-color .15s}
+.btn:hover:not(:disabled){background:#f0f7fc;border-color:#7aaed2}
+.btn.primary{background:var(--link);border-color:var(--link);color:#fff}.btn.primary:hover:not(:disabled){background:var(--link-d);border-color:var(--link-d)}
+.btn.danger{border-color:#e5b9b5;color:#a62a23}.btn.danger:hover:not(:disabled){background:var(--bad-soft);border-color:#d98e87}
+.btn.sm{min-height:30px;padding:3px 10px;font-size:12.5px}.btn:disabled{opacity:.45;cursor:not-allowed}.btn.google{border-color:#c6d0dc;width:100%}
+label{font-size:13.5px;font-weight:650;color:#29435f;margin-bottom:4px;display:block}
+input[type=text],input[type=email],input[type=password],input[type=date],input[type=number],input[type=url],textarea,select{width:100%;font:14.5px var(--sans);color:#1d334d;background:#fff;border:1px solid #b9c7d6;border-radius:6px;padding:8px 11px;min-height:40px;transition:border-color .15s}
+input:focus,textarea:focus,select:focus{border-color:#1684c7;outline:none}
+textarea{min-height:90px;resize:vertical}
+.chk{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;color:#334e68;margin:0;cursor:pointer}.chk input{margin-top:3px;accent-color:var(--link)}
+.field{display:flex;flex-direction:column}.hint{font-size:12.5px;color:#62758b;margin-top:3px}.req::after{content:' *';color:var(--bad)}
+.tw{overflow-x:auto;border:1px solid #e0e7ef;border-radius:6px;background:#fff}
+table{border-collapse:collapse;width:100%;min-width:600px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #e8edf3}
+th{background:#f5f8fb;color:#52677f;font:650 11px var(--sans);letter-spacing:.05em;text-transform:uppercase}
+tr:last-child td{border-bottom:0}tr.click{cursor:pointer}tr.click:hover td{background:#f4f9fd}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px}
+.tile{background:#fff;border:1px solid #d9e2ec;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--fg);box-shadow:var(--shadow)}
+.tile:hover{border-color:#70b2dc;transform:translateY(-1px)}
+.tile .ms{font-size:26px;color:var(--link);background:#eaf5fc;border-radius:6px;padding:6px;box-sizing:content-box;width:26px;height:26px}
+.tile b{font:650 17px/1.25 var(--sans);color:var(--head)}.tile .d{font-size:13.5px;color:#5b6f86}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.tabs a,.tabs button{border:0;background:none;color:#52677f;font:600 13.5px var(--sans);padding:8px 12px;border-bottom:3px solid transparent;cursor:pointer;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.tabs .on{color:#005ea8;border-bottom-color:var(--link)}
+.wzbar{list-style:none;margin:0;padding:0;display:flex;gap:6px}.wzbar li{flex:1;display:flex;gap:8px;align-items:center;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:#fff;color:#60748b;font-size:12.5px;font-weight:600}.wzbar li b{width:22px;height:22px;border-radius:50%;font-size:11.5px;background:#f4f7fa;border:1px solid #cbd7e3;color:#52677f;display:inline-flex;align-items:center;justify-content:center}.wzbar li.on{background:var(--link-soft);border-color:#87c0e3;color:#174e78}.wzbar li.on b{background:var(--link);border-color:var(--link);color:#fff}.wzbar li.done{border-color:#b8ddcb;background:var(--ok-soft);color:#286747}.wzbar li.done b{border-color:#39845e;background:#39845e;color:#fff}
+.bar-sticky{position:sticky;bottom:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px 14px;box-shadow:0 -2px 10px #17365d0a;z-index:3}
+.mail{white-space:pre-wrap;border-left:3px solid #b8cfe1;padding-left:12px;font-size:13.5px}
+.auth-wrap{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:24px;align-items:start}@media (max-width:850px){.auth-wrap{grid-template-columns:1fr}}
+.ov{position:fixed;inset:0;background:#0c234066;z-index:20;display:flex;align-items:center;justify-content:center;padding:16px}
+.dlg{background:#fff;border-radius:8px;max-width:440px;width:100%;padding:20px;display:flex;flex-direction:column;gap:12px;box-shadow:0 15px 40px #0c234050}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;background:#17365d;color:#fff;border-radius:6px;padding:10px 16px;z-index:30;font-size:13.5px;box-shadow:0 6px 20px #0c234040}
+.empty{text-align:center;color:var(--muted);padding:24px 10px;display:flex;flex-direction:column;gap:4px;align-items:center}
+.agree{max-height:180px;overflow-y:auto;border:1px solid var(--line);border-radius:6px;background:#fff;padding:10px 14px;font-size:13px;line-height:1.6}
+.agree ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.tl{list-style:none;margin:0;padding:0}.tl li{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:6px 0;border-bottom:1px solid #e8edf3;font-size:13px}.tl li:last-child{border:0}
+</style>
+</head>
+<body>
+<div class="util"><div class="in"><b id="u1">Ingene Academic Society</b><a href="#/mailbox" id="mbx"></a><span class="grow"></span><div class="seg" id="langs" role="group" aria-label="Language"><span class="ms" aria-hidden="true">translate</span><button data-act="lang" data-l="vi">Tiếng Việt</button><button data-act="lang" data-l="en">English</button></div></div></div>
+<header class="site"><div class="in"><div class="toprow">
+  <a class="brand" href="#/">
+    <img src="logo.png" alt="Ingene Academic Society" style="height:38px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';">
+    <span style="display:none;font-weight:800;font-size:20px;letter-spacing:-0.03em;color:#b42318;align-items:center;gap:8px;">
+      <span style="display:inline-block;width:28px;height:28px;border-radius:50%;background:#b42318;color:#fff;text-align:center;line-height:28px;font-size:14px;font-weight:900;">IAS</span>
+      <span style="color:#17365d;">INGENE ACADEMIC SOCIETY</span>
+    </span>
+    <em id="brandt"></em>
+  </a>
+  <div id="acct" class="acct"></div>
+</div><nav id="nav" aria-label="Main"></nav></div></header>
+<main id="app"></main>
+<footer><div class="in" id="foot"></div></footer>
+<div id="ovl"></div>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+'use strict';
+let lang='vi';try{const sv=localStorage.getItem('ias-lang');if(sv)lang=sv}catch(e){}
+const L=(vi,en)=>lang==='vi'?vi:en;
+const P=a=>Array.isArray(a)?a[lang==='vi'?0:1]:a;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ic=n=>`<span class="ms" aria-hidden="true">${n}</span>`;
+const bt=(i,t)=>`${ic(i)}<span>${t}</span>`;
+const note=(t,k,i)=>`<div class="note ${k||''}">${ic(i||(k==='warn'?'warning':k==='ok'?'check_circle':'info'))}<div>${t}</div></div>`;
+const empty=(i,t,d)=>`<div class="empty">${ic(i)}<b>${t}</b>${d?`<span class="small">${d}</span>`:''}</div>`;
+
+const DAY=864e5;const now=()=>Date.now();
+const TZ='Asia/Ho_Chi_Minh';
+const fmt=(t,tm)=>t?new Date(t).toLocaleString(lang==='vi'?'vi-VN':'en-GB',{timeZone:TZ,day:'2-digit',month:lang==='vi'?'2-digit':'short',year:'numeric',...(tm?{hour:'2-digit',minute:'2-digit'}:{})}):'–';
+const dstr=t=>t?new Date(t).toLocaleDateString('sv-SE',{timeZone:TZ}):'';
+const H=s=>{let x=5381;for(const c of String(s)){x=((x<<5)+x+c.charCodeAt(0))>>>0}return x.toString(16).padStart(8,'0')};
+const rnd=(n=24)=>{const a=new Uint8Array(n);crypto.getRandomValues(a);return [...a].map(b=>b.toString(36).padStart(2,'0')).join('').slice(0,n)};
+const words=s=>String(s||'').trim()?String(s).trim().split(/\s+/).length:0;
+const uid=p=>p+rnd(8);
+const toIn=t=>t?dstr(t):'';
+const fromIn=(v,end)=>v?Date.parse(v+(end?'T23:59:59+07:00':'T00:00:00+07:00')):null;
+const pad=(n,k=4)=>String(n).padStart(k,'0');
+
+const linkErr=u=>{try{const x=new URL(u);if(x.protocol!=='https:')return L('Liên kết phải bắt đầu bằng https://','Must start with https://');if(!/(^|\.)(drive|docs)\.google\.com$/.test(x.hostname))return L('Chỉ nhận liên kết Google Drive.','Only Google Drive links allowed.');return''}catch(e){return L('Liên kết không hợp lệ.','Invalid link.')}};
+const linkName=u=>{const m=String(u).match(/\/d\/([\w-]{6,})|[?&]id=([\w-]{6,})/);return 'Drive · '+(m?(m[1]||m[2]).slice(0,10)+'…':L('liên kết','link'))};
+
+let toastT;function toast(m,err){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,3600)}
+
+const ROLE={author:['Tác giả','Author'],editor:['Biên tập viên','Editor'],lead_editor:['Phụ trách Ban biên tập','Editor-in-Chief'],head:['Chủ nhiệm Dự án','Project Director'],admin:['Quản trị','Administrator']};
+const STAFF=['editor','lead_editor','head','admin'];
+const ST={draft:['Bản nháp','Draft',''],submitted:['Đã nộp','Submitted','info'],screening:['Kiểm tra sơ bộ','Initial screening','info'],under_review:['Đang phản biện','Under review','info'],accepted:['Chấp nhận','Accepted','ok'],rejected:['Từ chối','Rejected','bad']};
+const st=s=>`<span class="st ${ST[s]?ST[s][2]:''}"><i></i>${P(ST[s]||['—','—'])}</span>`;
+const AST={draft:['Bản nháp','Draft',''],submitted:['Đã nộp','Submitted','info'],screening:['Đang thẩm định','Under screening','info'],passed_to_presentation:['Thông qua trình bày','Passed to presentation','warn'],approved:['Đã phê duyệt','Approved','ok'],rejected:['Không phê duyệt','Declined','bad'],withdrawn:['Đã rút','Withdrawn','']};
+const ast=s=>`<span class="st ${AST[s]?AST[s][2]:''}"><i></i>${P(AST[s]||['—','—'])}</span>`;
+const CALLST={draft:['Bản nháp','Draft',''],coming_soon:['Sắp mở','Coming soon','warn'],open:['Đang mở','Open','ok'],closed:['Đã đóng','Closed','bad']};
+const MODE={double_blind:['Kín hai chiều','Double-blind'],single_blind:['Kín một chiều','Single-blind'],none:['Không phản biện','No review']};
+
+const CC0=[
+  {key:'by',name:'CC BY 4.0',url:'https://creativecommons.org/licenses/by/4.0/',d:['Tự do chia sẻ và chỉnh sửa, kể cả thương mại, có ghi công.','Attribution required.']},
+  {key:'by-sa',name:'CC BY-SA 4.0',url:'https://creativecommons.org/licenses/by-sa/4.0/',d:['Tự do sử dụng, tác phẩm phái sinh cùng giấy phép.','Attribution-ShareAlike.']},
+  {key:'by-nc',name:'CC BY-NC 4.0',url:'https://creativecommons.org/licenses/by-nc/4.0/',d:['Sử dụng phi thương mại, có ghi công tác giả.','Non-commercial with credit.']},
+  {key:'by-nc-sa',name:'CC BY-NC-SA 4.0',url:'https://creativecommons.org/licenses/by-nc-sa/4.0/',d:['Phi thương mại, tác phẩm phái sinh chia sẻ tương tự.','Non-commercial ShareAlike.']},
+  {key:'by-nd',name:'CC BY-ND 4.0',url:'https://creativecommons.org/licenses/by-nd/4.0/',d:['Chia sẻ nguyên bản có ghi công, không tạo tác phẩm phái sinh.','No derivatives.']},
+  {key:'by-nc-nd',name:'CC BY-NC-ND 4.0',url:'https://creativecommons.org/licenses/by-nc-nd/4.0/',d:['Chỉ chia sẻ nguyên bản, phi thương mại, có ghi công.','Most restrictive.']}
+];
+
+const FIELDS=[
+  ['501',['501 Tâm lý học','501 Psychology']],
+  ['502',['502 Kinh tế và kinh doanh','502 Economics & Business']],
+  ['503',['503 Khoa học giáo dục','503 Educational Sciences']],
+  ['504',['504 Xã hội học','504 Sociology']],
+  ['505',['505 Pháp luật và Luật học','505 Law & Legal Studies']],
+  ['506',['506 Khoa học chính trị','506 Political Science']],
+  ['507',['507 Địa lý kinh tế và xã hội','507 Economic Geography']],
+  ['508',['508 Truyền thông đại chúng','508 Media & Communication']],
+  ['599',['599 Khoa học xã hội khác','599 Other Social Sciences']],
+  ['601',['601 Lịch sử và khảo cổ học','601 History']],
+  ['602',['602 Ngôn ngữ học và văn học','602 Literature & Linguistics']],
+  ['603',['603 Triết học và tôn giáo','603 Philosophy & Religion']],
+  ['604',['604 Nghệ thuật','604 Arts']],
+  ['other',['Lĩnh vực khác (ghi rõ)','Other Field']]
+];
+
+function nextCycle(t){
+  const d=new Date(t);let y=d.getUTCFullYear();
+  const cyc=(DB.settings&&DB.settings.projectCycles)||CYC;
+  for(let k=0;k<4;k++){
+    for(const m of cyc){
+      const c=Date.UTC(y,m,15);
+      if(c>t)return{t:c,label:`${pad(m+1,2)}/${y}`};
+    }
+    y++;
+  }
+}
+const cdText=ms=>{if(ms<=0)return L('đã đến hạn','due');const d=Math.floor(ms/DAY),h=Math.floor(ms%DAY/36e5);return `${d}${L(' ngày ',' d ')}${h}${L(' giờ',' h')}`};
+const cd=iso=>`<b class="mono">${cdText(new Date(iso)-now())}</b>`;
+
+const SETTINGS0={reviewDays:20,retentionMonths:12,codeFormat:'IAS-{YYYY}-{NNNN}',maxFields:3,childAge:16,projectCycles:[0,5,10]};
+const DB={users:[],types:[],calls:[],subs:[],apps:[],mails:[],audit:[],guides:[],terms:[],seq:{sub:0,app:0,mail:0,draft:0},settings:{...SETTINGS0}};
+const S={uid:null};
+const U=id=>DB.users.find(u=>u.id===id);const me=()=>S.uid?U(S.uid):null;
+const callOf=s=>DB.calls.find(c=>c.id===s.callId);
+const typeOf=k=>DB.types.find(t=>t.key===k);
+const SUB=id=>DB.subs.find(s=>s.id===id);
+class Err extends Error{}
+const fail=(vi,en)=>{throw new Err(L(vi,en))};
+const ED=['editor','lead_editor'];
+const ACTIVE_APP=['draft','submitted','screening','passed_to_presentation'];
+
+const appOwner=a=>{
+  if(!a)return{name:'—',email:'',phone:''};
+  const u=a.userId?U(a.userId):null;
+  const ap=a.applicant||{};
+  const lg=a.legacy||{};
+  return{name:u?.name||ap.name||lg.name||'—',email:u?.email||ap.email||lg.email||'',phone:ap.phone||''};
+};
+const fieldsText=s=>(s.fields||[]).map(c=>c==='other'?(s.fieldOther||'Khác'):(FIELDS.find(f=>f[0]===c)?P(FIELDS.find(f=>f[0]===c)[1]):c)).join('; ');
+
+function audit(action,o={}){const a=DB.audit,prev=a.length?a[a.length-1].hash:'0';const actor=o.actor;const row={n:a.length+1,t:now(),actor:actor&&actor.email?actor.email:(actor||'system'),role:actor&&actor.role?actor.role:'system',action,target:o.target||'',detail:o.detail||'',prev};row.hash=H(prev+JSON.stringify([row.n,row.t,row.actor,row.action,row.target,row.detail]));a.push(Object.freeze(row));return row}
+const authorU=s=>U(s.authorId);
+function nextCode(){const y=new Date(now()).getFullYear();const n=++DB.seq.sub;return DB.settings.codeFormat.replace('{YYYY}',y).replace(/\{N+\}/,m=>pad(n,m.length-2))}
+function nextAppCode(){const y=new Date(now()).getFullYear();const n=++DB.seq.app;return `DA-${y}-${pad(n,3)}`}
+
+const emptyCall=()=>({id:uid('c'),slug:'',typeKey:'shcm_full',title:['',''],desc:['',''],scope:'',status:'open',opens:toIn(now()),closes:toIn(now()+60*DAY),abstractDeadline:'',fulltextDeadline:'',reviewDays:20,minOverride:'',schedule:'',externalUrl:''});
+function hydrateCall(c){
+  const T=()=>typeOf(c.typeKey)||{};
+  Object.defineProperties(c,{
+    type:{get:T,enumerable:false,configurable:true},
+    mode:{get:()=>T().mode||'none',enumerable:false,configurable:true}
+  });
+  return c;
+}
+
+const API={};
+API.newDraft=(u,callId)=>{
+  const c=DB.calls.find(x=>x.id===callId);
+  if(!c||c.status!=='open')fail('Đợt nộp hiện đang đóng.','Call is closed.');
+  if(typeOf(c.typeKey)?.who==='members'&&!u.member)fail('Chuyên mục này chỉ dành riêng cho thành viên IAS.','This call is for IAS members only.');
+  const s={id:uid('s'),code:'NHÁP-'+pad(++DB.seq.draft),callId,typeKey:c.typeKey,authorId:u.id,title:'',abstract:'',keywords:[],lang:u.lang||'vi',fields:[],fieldOther:'',lead:{aff:u.aff||''},authors:[],corresponding:0,pen:'',minor:'no',minorAge:'',guardian:{},prior:'no',priorNote:'',ai:'',coi:'',license:'by',ccWarranty:false,agree:false,status:'draft',onHold:false,created:now(),editorId:null,manuscriptFile:'',annexLink:'',history:[]};
+  DB.subs.push(s);audit('create',{actor:u,target:s.code});return s;
+};
+
+API.submitFull=(s,u)=>{
+  if(!s.title||!s.title.trim())fail('Vui lòng nhập tiêu đề bài viết.','Title required.');
+  if(!s.manuscriptFile||!s.manuscriptFile.trim())fail('Vui lòng dán liên kết Google Drive của bản thảo.','Manuscript Drive link required.');
+  const lErr=linkErr(s.manuscriptFile);if(lErr)fail(lErr,lErr);
+  if(!s.license)fail('Vui lòng lựa chọn giấy phép Creative Commons (CC) áp dụng cho bài viết.','CC license selection required.');
+  if(!s.ccWarranty)fail('Vui lòng xác nhận quyền cấp phép bản quyền đối với bài viết.','License warranty confirmation required.');
+  if(!s.agree)fail('Vui lòng tích chọn đồng ý cam kết thỏa thuận tác giả.','Agreement confirmation required.');
+  if(s.code.startsWith('NHÁP'))s.code=nextCode();
+  s.status='screening';s.history.push({t:now(),from:'draft',to:'screening',by:u.email});
+  const eds=DB.users.filter(x=>x.role==='editor');s.editorId=eds.length?eds[0].id:null;
+  audit('submit',{actor:u,target:s.code});return s;
+};
+
+API.appNew=(u,by)=>{
+  if(!by&&DB.apps.some(x=>x.userId===u.id&&ACTIVE_APP.includes(x.status)))fail('Đang có một hồ sơ đang xử lý. Mỗi người chỉ có một hồ sơ đang xử lý; nếu hồ sơ bị từ chối thì được nộp lại.','You already have an active application.');
+  const a={id:uid('a'),code:nextAppCode(),userId:u.id,title:'',topic:'',objectives:'',months:12,advisor:'',advisorOk:false,fields:['502'],fieldOther:'',applicant:{name:u.name,email:u.email,major:'',unit:u.aff||'',cohort:'',phone:''},cvLink:'',planLink:'',staffLink:'',staffNone:false,agree:false,commitNote:'',status:'draft',history:[],notes:[],created:now(),stateSince:now(),proxy:by?by.email:null};
+  DB.apps.push(a);audit('app:create',{actor:by||u,target:a.code});return a;
+};
+
+API.appSubmit=(a,u)=>{
+  const ap=a.applicant||{};
+  if(!ap.name?.trim()||!ap.email?.trim()||!ap.major?.trim()||!ap.unit?.trim()||!ap.cohort?.trim()||!ap.phone?.trim())fail('Vui lòng điền đầy đủ thông tin Chủ nhiệm Dự án (Họ tên, Email, Ngành, Đơn vị, Niên khóa, SĐT).','Applicant details incomplete.');
+  if(!a.title?.trim()||!a.topic?.trim()||!a.objectives?.trim())fail('Vui lòng điền đầy đủ Tên Dự án, Tên đề tài và Mục tiêu tổng quát.','Project info incomplete.');
+  if(!a.cvLink?.trim()||!a.planLink?.trim())fail('Vui lòng cung cấp link Google Drive Lý lịch khoa học và Kế hoạch thực hiện.','CV and Plan Drive links required.');
+  if(!a.staffNone&&!a.staffLink?.trim())fail('Vui lòng cung cấp link Báo cáo nhu cầu nhân sự hoặc tích chọn "Không có nhu cầu tuyển".','Staffing link or none required.');
+  if(!a.agree)fail('Vui lòng đọc và tích chọn đồng ý toàn bộ điều khoản cam kết của Chủ nhiệm Dự án.','Commitment agreement required.');
+  a.status='submitted';a.cycle=nextCycle(now()).label;a.stateSince=now();a.history.push({t:now(),from:'draft',to:'submitted',by:u.email});
+  audit('app:submit',{actor:u,target:a.code});return a;
+};
+
+API.appMove=(a,to,u,note)=>{
+  a.history.push({t:now(),from:a.status,to,by:u.email,note:note||''});
+  a.status=to;a.stateSince=now();
+  if(to==='approved'||to==='rejected')a.decision={at:now(),by:u.email,note:note||'',result:to};
+  audit('app:'+to,{actor:u,target:a.code,detail:note||''});return a;
+};
+
+API.callSave=(u,c)=>{
+  if(u.role!=='admin'&&!ED.includes(u.role))fail('Không có quyền.','Permission denied.');
+  if(!c.slug||!c.t0)fail('Vui lòng nhập slug và tên đợt nộp.','Slug and title required.');
+  let cur=DB.calls.find(x=>x.id===c.id);
+  const data = {
+    slug:c.slug,title:[c.t0,c.t1||c.t0],desc:[c.d0||'',c.d1||''],scope:c.scope||'',typeKey:c.typeKey,status:c.status,
+    opens:fromIn(c.opens),closes:fromIn(c.closes,true),abstractDeadline:fromIn(c.abstractDeadline,true),fulltextDeadline:fromIn(c.fulltextDeadline,true),
+    reviewDays:+c.reviewDays||20,minOverride:c.minOverride===''?null:+c.minOverride,schedule:c.schedule||'',externalUrl:c.externalUrl||''
+  };
+  if(cur){
+    Object.assign(cur,data);audit('call:update',{actor:u,target:cur.slug});
+  }else{
+    const nc=hydrateCall({...emptyCall(),...data,id:uid('c')});
+    DB.calls.push(nc);audit('call:create',{actor:u,target:nc.slug});
+  }
+};
+
+API.callDelete=(u,id)=>{
+  if(u.role!=='admin')fail('Chỉ Quản trị viên mới được xóa đợt.','Admin only.');
+  const idx=DB.calls.findIndex(x=>x.id===id);
+  if(idx>=0){const slug=DB.calls[idx].slug;DB.calls.splice(idx,1);audit('call:delete',{actor:u,target:slug});}
+};
+
+API.userSave=(u,d)=>{
+  if(u.role!=='admin')fail('Chỉ Quản trị viên mới được quản lý tài khoản.','Admin only.');
+  if(!d.email||!d.name)fail('Vui lòng nhập tên và email.','Name and email required.');
+  let target=DB.users.find(x=>x.id===d.id);
+  if(target){
+    target.name=d.name;target.role=d.role;target.aff=d.aff||'';
+    if(d.pw)target.pw=H(d.pw);
+    audit('user:update',{actor:u,target:target.email});
+  }else{
+    if(DB.users.some(x=>x.email.toLowerCase()===d.email.toLowerCase()))fail('Email này đã tồn tại.','Email already exists.');
+    const nu={id:uid('u'),role:d.role,name:d.name,email:d.email,aff:d.aff||'',pw:H(d.pw||'IAS-123456'),created:now()};
+    DB.users.push(nu);audit('user:create',{actor:u,target:nu.email});
+  }
+};
+
+const cfgTabs=(k,u)=>`
+  <div class="tabs" style="margin-bottom:16px;">
+    ${[
+      ['calls', L('Đợt nộp bài', 'Calls')],
+      ['guides', L('Hướng dẫn (Guides)', 'Guides')],
+      ['terms', L('Thỏa thuận & Cam kết', 'Commitment Terms')],
+      ['users', L('Người dùng & Phân quyền', 'Users')],
+      ['audit', L('Nhật ký kiểm toán', 'Audit Log')]
+    ].map(([x, t]) => `
+      <a class="btn sm ${k === x ? 'primary' : ''}" href="#/admin/${x}" style="margin: 0 4px 6px 0;">${t}</a>
+    `).join('')}
+  </div>
+`;
+
+const ROUTES=[];const on=(re,fn,roles)=>ROUTES.push({re,fn,roles});
+let AFTER=null,BIND={obj:null},lastHash=null;const ACT={};
+const getP=(o,p)=>p.split('.').reduce((a,k)=>a==null?a:a[k],o);
+const setP=(o,p,v)=>{const ks=p.split('.');let a=o;ks.slice(0,-1).forEach(k=>{if(!a[k])a[k]={};a=a[k]});a[ks[ks.length-1]]=v};
+const go=h=>{if(location.hash===h)render();else location.hash=h};
+const hd=(h,lead,crumb)=>`<div class="head">${crumb?`<div class="crumb">${crumb}</div>`:''}<h1>${h}</h1>${lead?`<p class="lead">${lead}</p>`:''}</div>`;
+const sec=(h,b,cls)=>`<section class="sec ${cls||''}">${h?`<h3>${h}</h3>`:''}${b}</section>`;
+const fld=(label,inner,hint,req,id)=>`<div class="field"><label${id?` for="${id}"`:''} class="${req?'req':''}">${label}</label>${inner}${hint?`<div class="hint">${hint}</div>`:''}</div>`;
+const val=p=>esc(getP(BIND.obj,p)??'');
+const inp=(p,o={})=>`<input id="b_${p.replace(/\./g,'_')}" type="${o.type||'text'}" data-b="${p}" value="${val(p)}" ${o.ph?`placeholder="${esc(o.ph)}"`:''} ${o.dis?'disabled':''} autocomplete="off">`;
+const txa=(p,o={})=>`<textarea id="b_${p.replace(/\./g,'_')}" data-b="${p}" rows="${o.rows||4}" ${o.dis?'disabled':''}>${val(p)}</textarea>`;
+const sel=(p,opts,o={})=>`<select id="b_${p.replace(/\./g,'_')}" data-b="${p}" ${o.dis?'disabled':''}>${opts.map(([v,t])=>`<option value="${esc(v)}" ${getP(BIND.obj,p)===v?'selected':''}>${esc(t)}</option>`).join('')}</select>`;
+const chk=(p,label,o={})=>`<label class="chk"><input type="checkbox" data-b="${p}" ${getP(BIND.obj,p)?'checked':''} ${o.dis?'disabled':''}><span>${label}</span></label>`;
+const rad=(p,opts,o={})=>`<div class="stack" role="radiogroup">${opts.map(([v,t])=>`<label class="chk"><input type="radio" name="r_${p}" data-b="${p}" data-v="${esc(v)}" ${getP(BIND.obj,p)==v?'checked':''} ${o.dis?'disabled':''}><span>${t}</span></label>`).join('')}</div>`;
+
+function explain(e){if(e instanceof Err)toast(e.message,true);else{console.error(e);toast(L('Có lỗi xảy ra.','An error occurred.'))}}
+const run=async fn=>{try{return await fn()}catch(e){explain(e)}};
+function ask(o){return new Promise(res=>{const el=$('#ovl');el.innerHTML=`<div class="ov"><form class="dlg" id="dlgf"><h3>${esc(o.title)}</h3>${o.body||''}${(o.fields||[]).map(f=>fld(esc(f.label),`<input id="d_${f.id}" type="${f.type||'text'}" value="${esc(f.val||'')}">`)).join('')}<div class="row" style="justify-content:flex-end"><button type="button" class="btn" id="dno">${L('Hủy','Cancel')}</button><button class="btn primary" id="dyes">${esc(o.ok||'OK')}</button></div></form></div>`;
+const close=v=>{el.innerHTML='';res(v)};if($('#dno'))$('#dno').onclick=()=>close(null);
+$('#dlgf').onsubmit=e=>{e.preventDefault();const v={};(o.fields||[]).forEach(f=>{v[f.id]=$('#d_'+f.id).value});close(o.single?true:v)}})}
+
+function onBind(e){const t=e.target,p=t.dataset.b;if(!p||!BIND.obj)return;let v=t.type==='checkbox'?t.checked:t.type==='radio'?t.dataset.v:t.value;setP(BIND.obj,p,v);BIND.on&&BIND.on(p,v,e)}
+document.addEventListener('input',onBind);document.addEventListener('change',onBind);
+document.addEventListener('click',e=>{const a=e.target.closest('[data-act]');if(!a)return;const f=ACT[a.dataset.act];if(f){if(a.tagName==='A'&&!a.getAttribute('href'))e.preventDefault();Promise.resolve(f(a,e)).catch(explain)}});
+
+function render(){const h=location.hash||'#/';const u=me();AFTER=null;BIND={obj:null};let html;
+try{let hit=null;for(const r of ROUTES){const m=h.match(r.re);if(m){hit=[r,m];break}}
+if(!hit)html=notFound();else{const[r,m]=hit;if(r.roles&&!u){html=authGate()}else if(r.roles&&!r.roles.includes(u.role))html=denied();else html=r.fn(m,u)}}
+catch(e){console.error(e);html=hd(L('Có lỗi xảy ra','Error occurred'),L('Vui lòng thử lại.','Please reload.'))}
+if(html===null)return;$('#app').innerHTML=html;chrome();if(lastHash!==h){window.scrollTo(0,0);lastHash=h}if(AFTER)AFTER()}
+const notFound=()=>hd(L('Không tìm thấy trang','Page not found'),L('Liên kết không tồn tại.','Link does not exist.'))+sec('',`<a class="btn primary" href="#/">${bt('home',L('Về trang chủ','Home'))}</a>`);
+const denied=()=>hd(L('Không có quyền truy cập','Access denied'),L('Bạn không có quyền vào trang này.','You cannot access this page.'))+sec('',`<a class="btn primary" href="#/">${bt('home',L('Về trang chủ','Home'))}</a>`);
+const authGate=()=>{setTimeout(()=>go('#/login'),0);return null};
+window.addEventListener('hashchange',render);
+
+const NAV={
+author:[['#/','home',['Trang chủ','Home']],['#/me','folder_open',['Bài nộp & Dự án','My Work']],['#/apply','group_add',['Lập Dự án','Apply Project']],['#/guide/guide-authors','menu_book',['Hướng dẫn','Guides']]],
+editor:[['#/editor','inbox',['Hàng đợi','Queue']],['#/board/applications','assignment_ind',['Hồ sơ Dự án','Applications']],['#/admin/calls','tune',['Đợt nộp','Calls']],['#/admin/guides','menu_book',['Hướng dẫn','Guides']]],
+lead_editor:[['#/editor','inbox',['Hàng đợi','Queue']],['#/board/applications','assignment_ind',['Hồ sơ Dự án','Applications']],['#/admin/calls','tune',['Đợt nộp','Calls']],['#/admin/guides','menu_book',['Hướng dẫn','Guides']]],
+head:[['#/editor','inbox',['Hàng đợi bài nộp','Queue']],['#/board/applications','assignment_ind',['Hồ sơ Dự án','Applications']],['#/admin/audit','history',['Nhật ký','Audit Log']]],
+admin:[['#/editor','inbox',['Hàng đợi','Queue']],['#/board/applications','assignment_ind',['Hồ sơ Dự án','Applications']],['#/admin/calls','tune',['Cấu hình đợt','Calls']],['#/admin/guides','menu_book',['Sửa Hướng dẫn','Guides']],['#/admin/terms','gavel',['Sửa Thỏa thuận','Terms']],['#/admin/users','manage_accounts',['Người dùng','Users']],['#/admin/audit','history',['Nhật ký','Audit Log']]]
+};
+
+function chrome(){const u=me();
+const unreadMails=DB.mails.filter(m=>u&&(u.role!=='author'||m.state!=='draft')&&(u.role!=='author'||m.to===u.email)).length;
+$('#mbx').innerHTML=bt('mail',L('Hộp thư','Mail'))+(unreadMails?`<span class="cnt" style="margin-left:4px;">${unreadMails}</span>`:'');
+$$('#langs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===lang));
+$('#brandt').textContent=L('Cổng đăng ký và nộp bản thảo khoa học – IAS Portal','IAS Portal');
+$('#acct').innerHTML=u?`<span><b>${esc(u.name)}</b> (${P(ROLE[u.role]||[u.role,u.role])})</span><a class="btn sm" href="#/me">${bt('person',L('Hồ sơ','Profile'))}</a><button class="btn sm" data-act="logout">${bt('logout',L('Đăng xuất','Sign out'))}</button>`:`<a class="btn sm primary" href="#/login">${bt('login',L('Đăng nhập','Sign in'))}</a>`;
+const h=location.hash||'#/';const items=u?(NAV[u.role]||NAV.author):[['#/login','login',['Đăng nhập','Sign in']]];
+$('#nav').innerHTML=items.map(([href,i,t])=>`<a href="${href}" class="${h===href?'on':''}">${ic(i)}${P(t)}</a>`).join('');
+$('#foot').innerHTML=`<span>© 2026 Ingene Academic Society</span><span>${L('Múi giờ: Việt Nam (UTC+7)','Time zone: Vietnam (UTC+7)')}</span>`;
+}
+ACT.lang=a=>{lang=a.dataset.l;try{localStorage.setItem('ias-lang',lang)}catch(e){}render()};
+
+on(/^#\/login$/,()=>{const u=me();if(u){setTimeout(()=>go(u.role==='author'?'#/':'#/editor'),0);return null}
+return `${hd(L('Đăng nhập cổng IAS','Sign in to IAS Portal'),L('Tác giả đăng nhập bằng Google. Nhân sự đăng nhập tài khoản hệ thống.','Authors sign in with Google. Staff use portal accounts.'))}
+<div class="auth-wrap"><div class="sec"><h2>${L('Tác giả','Authors')}</h2><button class="btn google" data-act="google">${bt('login',L('Tiếp tục với Google','Continue with Google'))}</button></div>
+<div class="sec"><h2>${L('Nhân sự IAS','IAS Staff')}</h2>${fld('Email','<input id="lg_e" type="email" autocomplete="username">',null,true,'lg_e')}${fld(L('Mật khẩu','Password'),'<input id="lg_p" type="password" autocomplete="current-password">',null,true,'lg_p')}<button class="btn primary" data-act="doLogin">${bt('login',L('Đăng nhập','Sign in'))}</button></div></div>`});
+
+ACT.doLogin=()=>{const em=$('#lg_e').value.trim(),pw=$('#lg_p').value;const u=DB.users.find(x=>x.email.toLowerCase()===em.toLowerCase());if(!u||u.pw!==H(pw))return toast(L('Email hoặc mật khẩu chưa đúng.','Incorrect credentials.'),true);S.uid=u.id;audit('login',{actor:u});go(u.role==='author'?'#/':'#/editor')};
+ACT.google=()=>run(async()=>{const r=await ask({title:L('Đăng nhập Google','Google Sign-In'),fields:[{id:'e',label:'Email',type:'email',req:true},{id:'n',label:L('Họ và tên','Full name'),req:true}],ok:L('Đăng nhập','Sign In')});if(!r)return;let u=DB.users.find(x=>x.email.toLowerCase()===r.e.toLowerCase());if(!u){u={id:uid('u'),role:'author',name:r.n,email:r.e,aff:'',created:now()};DB.users.push(u)}S.uid=u.id;audit('login:google',{actor:u});go('#/')});
+ACT.logout=()=>{audit('logout',{actor:me()});S.uid=null;go('#/login')};
+
+on(/^#\/$/, () => {
+  const u = me();
+  if (!u || u.role !== 'author') return denied();
+  const openCalls = DB.calls.filter(c => c.status === 'open');
+  
+  return `
+    ${hd(L(`Xin chào, ${esc(u.name)}`, `Welcome, ${esc(u.name)}`), L('Các đợt nhận bài đang mở & chương trình nghiên cứu:', 'Open calls & programs:'))}
+    
+    <div class="tiles">
+      ${openCalls.map(c => `
+        <a class="tile" href="#/calls/${c.slug}">
+          <span class="ms" aria-hidden="true" style="font-size:24px;color:var(--link);background:#eaf5fc;border-radius:6px;padding:6px;width:24px;height:24px;">menu_book</span>
+          <b>${esc(P(c.title))}</b>
+          <span class="d">${esc(P(c.desc) || '')}</span>
+          <div class="row" style="margin-top:auto;padding-top:8px;">
+            <span class="tag ok">${L('Đang mở', 'Open')}</span>
+            <span class="tag info">${P(MODE[c.mode] || ['Kín hai chiều', 'Double-blind'])}</span>
+          </div>
+        </a>
+      `).join('') || `<div class="sec">${L('Hiện không có đợt nộp nào đang mở.', 'No open calls at the moment.')}</div>`}
+    </div>
+
+    <div class="sec" style="margin-top:20px;">
+      <h3>Đăng ký thành lập Dự án nghiên cứu (IAS Projects)</h3>
+      <p class="small muted">Dành cho sinh viên, nhà nghiên cứu trẻ muốn chủ trì dự án học thuật độc lập do IAS bảo trợ.</p>
+      <div class="row">
+        <a class="btn primary" href="#/apply">${bt('group_add', 'Nộp hồ sơ lập Dự án')}</a>
+      </div>
+    </div>
+  `;
+});
+
+on(/^#\/calls\/(.+)$/,m=>{const c=DB.calls.find(x=>x.slug===m[1]);if(!c)return notFound();
+return `${hd(P(c.title),P(c.desc))}
+<div class="sec">
+  <p><b>${L('Loại bài','Type')}:</b> ${P(typeOf(c.typeKey).name)}</p>
+  <p><b>${L('Hình thức phản biện','Review')}:</b> ${P(MODE[c.mode])}</p>
+  ${c.scope?`<p><b>${L('Phạm vi / Lĩnh vực','Scope')}:</b> ${esc(c.scope)}</p>`:''}
+  ${c.schedule?`<p><b>${L('Lịch công bố','Schedule')}:</b> ${esc(c.schedule)}</p>`:''}
+  <div class="row">
+    ${c.status==='open'?(c.externalUrl?`<a class="btn primary" href="${esc(c.externalUrl)}" target="_blank">${bt('open_in_new',L('Nộp qua liên kết ngoài','Submit via Link'))}</a>`:`<a class="btn primary" href="#/submit/${c.slug}">${bt('edit_note',L('Nộp bài mới','Submit'))}</a>`):''}
+  </div>
+</div>`});
+
+/* ---------- QUY TRÌNH NỘP BÀI WIZARD (FULL PROTOTYPE) ---------- */
+let WZ={step:0,id:null};
+const wzSteps=(s,c)=>[['info',L('Thông tin','Details')],['authors',L('Tác giả','Authors')],['files',L('Tệp bản thảo','Files')],['decl',L('Bản quyền & Cam kết','Declarations')],['send',L('Xem lại và nộp','Review & submit')]];
+
+const fieldPick=obj=>`
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:4px 14px">
+    ${FIELDS.map(([k,t])=>`
+      <label class="chk">
+        <input type="checkbox" data-act="fldTog" data-c="${k}" ${(obj.fields||[]).includes(k)?'checked':''}>
+        <span>${esc(P(t))}</span>
+      </label>
+    `).join('')}
+  </div>
+  <div class="fs ${(obj.fields||[]).length&&(obj.fields||[]).length<=DB.settings.maxFields?'ok':'warn'}">
+    ${(obj.fields||[]).length}/${DB.settings.maxFields} ${L('lĩnh vực đã chọn (tối đa 3)','fields chosen (max 3)')}
+  </div>
+`;
+
+ACT.fldTog=a=>{
+  const o=BIND.obj, c=a.dataset.c;
+  o.fields=o.fields||[];
+  if(o.fields.includes(c)) o.fields=o.fields.filter(x=>x!==c);
+  else {
+    if(o.fields.length>=DB.settings.maxFields){ toast(L('Chọn tối đa 3 lĩnh vực.','Choose at most 3 fields.')); return; }
+    o.fields.push(c);
+  }
+  render();
+};
+
+on(/^#\/submit\/(.+)$/,(m,u)=>{
+  if(!u) return authGate();
+  let s=SUB(m[1]);
+  const c0=DB.calls.find(x=>x.slug===m[1]);
+  if(!s&&c0){
+    s=DB.subs.find(x=>x.authorId===u.id&&x.callId===c0.id&&x.status==='draft');
+    if(!s) s=API.newDraft(u,c0.id);
+    setTimeout(()=>go('#/submit/'+s.id),0); return null;
+  }
+  if(!s||s.authorId!==u.id) return notFound();
+
+  const c=callOf(s);
+  if(WZ.id!==s.id){ WZ={step:0,id:s.id}; }
+  const steps=wzSteps(s,c);
+  if(WZ.step>=steps.length) WZ.step=0;
+  const key=steps[WZ.step][0];
+
+  BIND={
+    obj:s,
+    on:(p)=>{
+      if(p==='abstract'){
+        const el=$('#wc');
+        if(el){
+          const w=words(s.abstract);
+          el.textContent=w+' '+L('từ','words');
+          el.className='fs '+(w>=150&&w<=300?'ok':'warn');
+        }
+      }
+    }
+  };
+
+  const body={
+    info:()=>sec(L('1. Thông tin bài viết','1. Submission Details'),`
+      ${fld(L('Tiêu đề bài viết (tiếng Việt hoặc tiếng Anh)','Title (Vietnamese or English)'),inp('title'),null,true)}
+      <div class="two">
+        ${fld(L('Ngôn ngữ bài viết','Language'),sel('lang',[['vi','Tiếng Việt'],['en','English']]),null,true)}
+        ${fld(L('Giảng viên hướng dẫn / Cố vấn (tùy chọn)','Supervisor (optional)'),inp('supervisor'),L('Chỉ ghi khi giảng viên đã đồng ý','Name only if agreed'))}
+      </div>
+      ${fld(L('Tóm tắt (Abstract, chuẩn 150 – 300 từ)','Abstract (150-300 words)'),txa('abstract',{rows:6})+`<div id="wc" class="fs ${words(s.abstract)>=150&&words(s.abstract)<=300?'ok':'warn'}">${words(s.abstract)} ${L('từ','words')}</div>`,null,true)}
+      ${fld(L('Từ khóa (3 – 5 từ, cách nhau bằng dấu phẩy)','Keywords (3-5 keywords, comma-separated)'),inp('kwText',{ph:'khoa học quản lý, sở hữu trí tuệ, ...'}),null,true)}
+      ${fld(L('Lĩnh vực khoa học (Theo Thông tư 24/2025/TT-BKHCN)','Subject Classification (Circular 24/2025)'),fieldPick(s),null,true)}
+      ${(s.fields||[]).includes('other')?fld(L('Nêu rõ lĩnh vực khác','Specify other field'),inp('fieldOther'),null,true):''}
+    `),
+    authors:()=>sec(L('2. Danh sách tác giả','2. Authors'),`
+      <div class="box">
+        <b>${L('Tác giả 1 (Người nộp bài)','Author 1 (Submitting author)')}: ${esc(u.name)}</b>
+        <div class="small muted">${esc(u.email)}</div>
+        <div class="two" style="margin-top:6px;">
+          ${fld(L('Cơ quan / Trường đào tạo','Affiliation'),inp('lead.aff'),null,true)}
+          ${fld(L('Bút danh khi công bố (tùy chọn)','Pen name (optional)'),inp('pen'),L('Bản công bố sẽ hiện bút danh thay vì tên thật','Published with pen name'))}
+        </div>
+      </div>
+      ${(s.authors||[]).map((a,i)=>`
+        <div class="box">
+          <div class="row sp">
+            <b>${L('Đồng tác giả','Co-author')} ${i+2}</b>
+            <button class="btn sm danger" data-act="auDel" data-i="${i}">${bt('delete',L('Xóa','Remove'))}</button>
+          </div>
+          <div class="two">
+            ${fld(L('Họ và tên','Full name'),inp(`authors.${i}.name`),null,true)}
+            ${fld('Email',inp(`authors.${i}.email`,{type:'email'}),null,true)}
+            ${fld(L('Cơ quan công tác','Affiliation'),inp(`authors.${i}.aff`),null,true)}
+            ${fld(L('Bút danh (tùy chọn)','Pen name'),inp(`authors.${i}.pen`))}
+          </div>
+        </div>
+      `).join('')}
+      <div><button class="btn" data-act="auAdd">${bt('person_add',L('+ Thêm đồng tác giả','+ Add co-author'))}</button></div>
+      <div class="two" style="margin-top:10px;">
+        ${fld(L('Chọn tác giả liên hệ (Corresponding author)','Corresponding author'),`
+          <select data-b="corresponding" id="b_corresponding">
+            ${[u.name,...(s.authors||[]).map(x=>x.name||'...')].map((n,idx)=>`
+              <option value="${idx}" ${+s.corresponding===idx?'selected':''}>${idx+1}. ${esc(n)}</option>
+            `).join('')}
+          </select>
+        `,null,true)}
+        ${fld(L('Có tác giả dưới 18 tuổi?','Under-18 authors?'),sel('minor',[['no',L('Không','No')],['yes',L('Có tác giả dưới 18 tuổi','Yes')]]))}
+      </div>
+      ${s.minor==='yes'?`
+        <div class="box">
+          ${fld(L('Nhóm tuổi','Age group'),sel('minorAge',[['16to17',L('Từ đủ 16 đến dưới 18 tuổi (tự xác nhận)','16 to 17 (self-affirm)')],['lt16',L('Dưới 16 tuổi (Cần xác nhận của người giám hộ)','Under 16 (Guardian required)')]]))}
+          ${s.minorAge==='lt16'?`
+            <div class="two">
+              ${fld(L('Họ tên người giám hộ','Guardian name'),inp('guardian.name'),null,true)}
+              ${fld(L('Email người giám hộ','Guardian email'),inp('guardian.email',{type:'email'}),null,true)}
+            </div>
+          `:''}
+        </div>
+      `:''}
+    `),
+    files:()=>sec(L('3. Bản thảo & Phụ lục (Liên kết Google Drive)','3. Files & Annexes (Google Drive Link)'),`
+      ${note(L('Dán liên kết Google Drive của bản thảo (.docx) soạn theo mẫu chuẩn IAS và trích dẫn chuẩn IEEE. Nếu là phản biện kín, tuyệt đối không để lộ danh tính trong bài. Cấp quyền truy cập xem cho Ban biên tập.','Paste Google Drive link of the .docx manuscript (IAS IEEE template). Keep anonymous for double-blind.'))}
+      ${fld(L('Liên kết Google Drive của bản thảo (.docx)','Manuscript Google Drive Link (.docx)'),inp('manuscriptFile',{ph:'https://drive.google.com/...'}),null,true)}
+      ${fld(L('Phụ lục / Dữ liệu nghiên cứu (Google Drive Link, tùy chọn)','Supplementary Material Link (optional)'),inp('annexLink',{ph:'https://drive.google.com/...'}))}
+    `),
+    decl:()=>sec(L('4. Giấy phép bản quyền (CC) & Khai báo','4. Copyright & Declarations'),`
+      <div class="box" style="margin-bottom:12px;">
+        <b>${L('Lựa chọn Giấy phép Creative Commons (CC 4.0 Quốc tế) áp dụng khi công bố:','Choose a Creative Commons Licence (CC 4.0):')}</b>
+        <div class="stack" style="margin-top:8px;">
+          ${CC0.map(x=>`
+            <label class="chk">
+              <input type="radio" name="r_license" data-b="license" data-v="${x.key}" ${s.license===x.key?'checked':''}>
+              <span><b>${x.name}</b> — <span class="small muted">${P(x.d)}</span></span>
+            </label>
+          `).join('')}
+        </div>
+        <div style="margin-top:10px;">
+          ${chk('ccWarranty',L('Tôi cam đoan tôi có đầy đủ thẩm quyền cấp phép Creative Commons đã chọn, bao gồm mọi nội dung do bên thứ ba cung cấp được đưa vào bài viết.','I warrant that I have the right to grant the selected Creative Commons licence, including all third-party materials in the manuscript.'))}
+        </div>
+      </div>
+      ${fld(L('Bài viết đã từng công bố hoặc nộp xét duyệt ở nơi khác chưa?','Previously published?'),sel('prior',[['no',L('Chưa từng công bố','No')],['yes',L('Đã từng công bố hoặc gửi nơi khác','Yes')]]))}
+      ${s.prior==='yes'?fld(L('Ghi rõ nơi và thời gian đã công bố','Where and when published'),inp('priorNote'),null,true):''}
+      ${fld(L('Tuyên bố sử dụng Trí tuệ nhân tạo (AI Disclosure - Khuyến nghị)','AI Use Statement (Recommended)'),txa('ai',{rows:3}),L('Nêu rõ công cụ AI đã sử dụng và mục đích sử dụng trong nghiên cứu này','State tools and purpose'))}
+      ${fld(L('Cam kết không có xung đột lợi ích','Conflicts of Interest'),txa('coi',{rows:2}),L('Ghi chú nếu có tài trợ đặc thù hoặc xung đột tiềm tàng','Note any conflict'))}
+    `),
+    send:()=>{
+      const termsList=DB.terms.filter(t=>t.scope==='submission'&&t.active!==false).sort((a,b)=>(a.order||0)-(b.order||0));
+      const chosenCC=CC0.find(x=>x.key===s.license);
+      return sec(L('5. Xem lại & Nộp bài','5. Review & Submit'),`
+        <dl class="stack" style="margin:0 0 16px 0;">
+          <div><b>${L('Tiêu đề','Title')}:</b> ${esc(s.title||'—')}</div>
+          <div><b>${L('Độ dài tóm tắt','Abstract')}:</b> ${words(s.abstract)} ${L('từ','words')} · <b>${L('Ngôn ngữ','Language')}:</b> ${s.lang==='en'?'English':'Tiếng Việt'}</div>
+          <div><b>${L('Tác giả','Authors')}:</b> ${[u.name,...(s.authors||[]).map(x=>x.name)].filter(Boolean).map(esc).join('; ')}</div>
+          <div><b>${L('Giấy phép bản quyền đã chọn','Chosen CC Licence')}:</b> <span class="tag info">${chosenCC?chosenCC.name:'CC BY 4.0'}</span></div>
+          <div><b>${L('Liên kết bản thảo','Manuscript Link')}:</b> <a href="${esc(s.manuscriptFile||'#')}" target="_blank" class="mono">${esc(s.manuscriptFile||'—')}</a></div>
+        </dl>
+        <div class="box">
+          <div class="row sp">
+            <b>${L('Thỏa thuận và cam kết của tác giả','Author Commitments & Agreement')}</b>
+            ${u&&(u.role==='admin'||ED.includes(u.role))?`<a class="btn sm" href="#/admin/terms">${bt('gavel',L('Sửa các điều khoản này','Edit terms'))}</a>`:''}
+          </div>
+          <div class="agree">
+            <ol>
+              ${termsList.map(t=>`<li>${esc(lang==='vi'?t.vi:(t.en||t.vi))}${t.link?` <a href="${esc(t.link)}" target="_blank" rel="noopener noreferrer">${L('Xem toàn văn','Read in full')}</a>`:''}</li>`).join('')}
+            </ol>
+          </div>
+          <div style="margin-top:8px;">
+            ${chk('agree',L('Tôi đã đọc, hiểu rõ và đồng ý với toàn bộ các điều khoản học thuật trên.','I have read and agree to all terms above.'))}
+          </div>
+        </div>
+        <div class="row" style="margin-top:16px;">
+          <button class="btn primary" data-act="submitNow" data-id="${s.id}">${bt('send',L('Xác nhận & Nộp bài','Submit Manuscript'))}</button>
+        </div>
+      `);
+    }
+  }[key]();
+
+  return `
+    ${hd(esc(s.title||L('Nộp bài mới','New Submission')), `${P(c.title)} · <span class="mono">${s.code}</span>`)}
+    <ol class="wzbar" style="margin-bottom:18px;">
+      ${steps.map(([k,t],idx)=>`
+        <li class="${idx===WZ.step?'on':idx<WZ.step?'done':''}">
+          <b>${idx<WZ.step?'✓':idx+1}</b> ${t}
+        </li>
+      `).join('')}
+    </ol>
+    ${body}
+    <div class="bar-sticky row sp" style="margin-top:20px;">
+      <div class="row">
+        <button class="btn" data-act="wzPrev" ${WZ.step===0?'disabled':''}>${bt('arrow_back',L('Quay lại','Back'))}</button>
+        ${WZ.step<steps.length-1?`<button class="btn primary" data-act="wzNext">${bt('arrow_forward',L('Tiếp tục','Next'))}</button>`:''}
+      </div>
+      <span class="small muted">${ic('cloud_done')} ${L('Hệ thống tự động lưu nháp','Autosaved')}</span>
+    </div>
+  `;
+});
+
+ACT.wzPrev=()=>{ WZ.step=Math.max(0,WZ.step-1); render(); };
+ACT.wzNext=()=>{ WZ.step++; render(); };
+ACT.auAdd=()=>{ (BIND.obj.authors=BIND.obj.authors||[]).push({name:'',email:'',aff:'',pen:''}); render(); };
+ACT.auDel=a=>{ BIND.obj.authors.splice(+a.dataset.i,1); render(); };
+ACT.submitNow=a=>run(()=>{const s=SUB(a.dataset.id);API.submitFull(s,me());toast(L('Đã nộp bài thành công!','Manuscript submitted successfully!'));go('#/me')});
+
+/* ---------- ĐĂNG KÝ THÀNH LẬP DỰ ÁN (FULL PROTOTYPE WORKFLOW) ---------- */
+on(/^#\/apply$/, (m, u) => {
+  if (!u || u.role !== 'author') return denied();
+  const nc = nextCycle(now());
+  const mine = DB.apps.filter(a => a.userId === u.id);
+  const act = mine.find(a => ACTIVE_APP.includes(a.status));
+  return `${hd(L('Đăng ký lập Dự án nghiên cứu', 'Apply to found a Project'), L('Hồ sơ được tiếp nhận liên tục và xét duyệt theo ba đợt mỗi năm (tháng 01, tháng 6, tháng 11). Chủ nhiệm Dự án quyết định phê duyệt hoặc không phê duyệt.', 'Applications are accepted continuously and reviewed in January, June and November.'))}
+  ${note(`${L('Đợt xét kế tiếp', 'Next review round')}: <b>${nc.label}</b> · ${L('còn', 'in')} ${cd(new Date(nc.t).toISOString())}`)}
+  ${act ? note(L('Đang có một hồ sơ đang xử lý. Mỗi người chỉ có một hồ sơ đang xử lý; nếu hồ sơ bị từ chối thì được nộp lại.', 'You already have an active application in progress.'), 'warn') : `
+    <div class="row">
+      <button class="btn primary" data-act="appNew">${bt('add', L('Tạo hồ sơ mới', 'Start a new application'))}</button>
+      <a class="btn" href="#/guide/guide-project">${bt('menu_book', L('Hướng dẫn hồ sơ', 'Application guide'))}</a>
+    </div>
+  `}
+  ${mine.length ? sec(L('Hồ sơ của tôi', 'My applications'), `<div class="stack">${mine.map(a => `<a class="item" href="#/applications/${a.id}"><div class="row sp"><b>${esc(a.title || L('(chưa có tên)', '(untitled)'))}</b>${ast(a.status)}</div><span class="small muted mono">${a.code}</span></a>`).join('')}</div>`) : ''}`;
+});
+
+ACT.appNew = () => run(() => { const a = API.appNew(me()); go('#/applications/' + a.id); });
+
+on(/^#\/applications\/(.+)$/, (m, u) => {
+  const a = DB.apps.find(x => x.id === m[1]);
+  if (!a) return notFound();
+  const ow = appOwner(a);
+  if (u.role === 'author' && a.userId !== u.id) return denied();
+  const draft = a.status === 'draft' && (u.id === a.userId || u.role === 'admin');
+  BIND = { obj: a };
+  const ap = a.applicant || {};
+  const staffRole = ['head', 'lead_editor', 'admin'].includes(u.role);
+  const pTerms = DB.terms.filter(t => t.scope === 'project' && t.active !== false).sort((x,y)=>(x.order||0)-(y.order||0));
+
+  const filesRO = `
+    <div class="stack">
+      ${a.cvLink ? `<div class="row sp"><span>${ic('description')} <b>Lý lịch khoa học (CV):</b> <a href="${esc(a.cvLink)}" target="_blank" class="mono">${esc(a.cvLink)}</a></span></div>` : ''}
+      ${a.planLink ? `<div class="row sp"><span>${ic('description')} <b>Kế hoạch tổ chức thực hiện:</b> <a href="${esc(a.planLink)}" target="_blank" class="mono">${esc(a.planLink)}</a></span></div>` : ''}
+      ${a.staffNone ? `<div class="small muted">Báo cáo nhu cầu nhân sự: Không có nhu cầu tuyển thành viên.</div>` : (a.staffLink ? `<div class="row sp"><span>${ic('description')} <b>Báo cáo nhu cầu nhân sự:</b> <a href="${esc(a.staffLink)}" target="_blank" class="mono">${esc(a.staffLink)}</a></span></div>` : '')}
+    </div>
+  `;
+
+  const readOnly = sec(L('Nội dung hồ sơ', 'Application content'), `
+    <div class="two">
+      <div class="stack">
+        <h3>${L('Chủ nhiệm Dự án (ứng viên)', 'Project lead (applicant)')}</h3>
+        <div><b>${esc(ap.name || ow.name)}</b></div>
+        <div class="small">${esc(ap.major || '')} · ${esc(ap.unit || '')} · ${L('niên khóa', 'cohort')} ${esc(ap.cohort || '')}</div>
+        <div class="small muted">${esc(ap.email || ow.email)} · ${esc(ap.phone || '')}</div>
+      </div>
+      <div class="stack">
+        <h3>${L('Dự án', 'Project')}</h3>
+        <div><b>${esc(a.title || '—')}</b></div>
+        <div class="small">${L('Đề tài', 'Topic')}: ${esc(a.topic || '—')}</div>
+        <div class="small">${L('Thời gian thực hiện', 'Duration')}: ${a.months || 12} ${L('tháng', 'months')}</div>
+        <div class="small">${L('Lĩnh vực', 'Fields')}: ${esc(fieldsText(a) || '—')}</div>
+        ${a.advisor ? `<div class="small">${L('Giảng viên hướng dẫn', 'Advisor')}: ${esc(a.advisor)} ${a.advisorOk ? `(${L('đã xác nhận', 'confirmed')})` : ''}</div>` : ''}
+      </div>
+    </div>
+    <div>
+      <h3>${L('Mục tiêu tổng quát', 'General objective')}</h3>
+      <p style="margin:0">${esc(a.objectives || '—')}</p>
+    </div>
+    ${filesRO}
+    ${a.agree ? `<div class="small" style="margin-top:6px;">${ic('check_circle')} ${L('Đã đồng ý toàn bộ cam kết và thỏa thuận của Chủ nhiệm Dự án', 'Agreed to the Project lead commitments')} (${fmt(a.stateSince, 1)})</div>` : ''}
+    ${a.commitNote ? `<div class="small"><b>${L('Ý kiến khác', 'Other comments')}</b>: ${esc(a.commitNote)}</div>` : ''}
+  `);
+
+  const form = sec(L('Nội dung hồ sơ', 'Application content'), `
+    <h3>${L('1. Thông tin Chủ nhiệm Dự án (ứng viên)', '1. Project lead details')}</h3>
+    <div class="two">
+      ${fld(L('Họ tên chủ nhiệm', 'Full name'), inp('applicant.name'), null, true)}
+      ${fld('Email', inp('applicant.email', { type: 'email' }), null, true)}
+      ${fld(L('Ngành học', 'Major'), inp('applicant.major'), null, true)}
+      ${fld(L('Đơn vị đào tạo (Khoa, Trường)', 'Training unit (faculty, school)'), inp('applicant.unit'), null, true)}
+      ${fld(L('Niên khóa', 'Cohort'), inp('applicant.cohort', { ph: '2022-2026' }), null, true)}
+      ${fld(L('Số điện thoại liên hệ', 'Phone'), inp('applicant.phone'), null, true)}
+    </div>
+    <h3>${L('2. Thông tin Dự án đăng ký', '2. Project Details')}</h3>
+    ${fld(L('Tên Dự án nghiên cứu', 'Project name'), inp('title'), null, true)}
+    ${fld(L('Tên đề tài trọng tâm', 'Research topic'), inp('topic'), null, true)}
+    ${fld(L('Mục tiêu tổng quát', 'General objective'), txa('objectives', { rows: 4 }), null, true)}
+    ${fld(L('Thời gian thực hiện', 'Duration'), rad('months', [['6', L('6 tháng', '6 months')], ['12', L('12 tháng', '12 months')]]), null, true)}
+    ${fld(L('Lĩnh vực khoa học (Chọn 1 đến 3)', 'Science fields (1 to 3)'), fieldPick(a), null, true)}
+    ${(a.fields || []).includes('other') ? fld(L('Nêu rõ lĩnh vực khác', 'Specify other field'), inp('fieldOther'), null, true) : ''}
+    <div class="two">
+      ${fld(L('Giảng viên hướng dẫn / Cố vấn (nếu có)', 'Advisor (optional)'), inp('advisor'))}
+      <div class="field" style="justify-content:center;">${chk('advisorOk', L('Giảng viên đã xác nhận đồng ý hướng dẫn', 'The advisor has confirmed'))}</div>
+    </div>
+    <h3>${L('3. Hồ sơ đính kèm (Liên kết Google Drive)', '3. Drive Links')}</h3>
+    ${fld(L('Liên kết Google Drive Lý lịch khoa học chủ nhiệm (CV)', 'CV Drive link'), inp('cvLink', { ph: 'https://drive.google.com/...' }), null, true)}
+    ${fld(L('Liên kết Google Drive Kế hoạch tổ chức thực hiện (Đề cương sơ bộ 12 tháng)', 'Implementation plan Drive link'), inp('planLink', { ph: 'https://drive.google.com/...' }), null, true)}
+    ${fld(L('Liên kết Google Drive Báo cáo nhu cầu nhân sự', 'Staffing needs Drive link'), inp('staffLink', { ph: 'https://drive.google.com/...' }))}
+    ${chk('staffNone', L('Không có nhu cầu tuyển thêm nhân sự (thay cho tệp báo cáo nhu cầu nhân sự)', 'No hiring needed (instead of staffing report)'))}
+    <div class="box" style="margin-top:14px;">
+      <div class="row sp">
+        <b>${L('Cam kết của Chủ nhiệm Dự án (14 điều khoản)', 'Project lead commitments (14 terms)')}</b>
+        ${u && (u.role === 'admin' || ED.includes(u.role)) ? `<a class="btn sm" href="#/admin/terms">${bt('gavel', L('Sửa các điều khoản này tại Sửa Thỏa thuận', 'Edit terms'))}</a>` : ''}
+      </div>
+      <div class="agree">
+        <ol>
+          ${pTerms.map(t => `<li>${esc(lang === 'vi' ? t.vi : (t.en || t.vi))}${t.link ? ` <a href="${esc(t.link)}" target="_blank" rel="noopener noreferrer">${L('Xem toàn văn', 'Read in full')}</a>` : ''}</li>`).join('')}
+        </ol>
+      </div>
+      <div style="margin-top:8px;">${chk('agree', L('Tôi đã đọc, hiểu rõ và đồng ý toàn bộ 14 điều khoản cam kết học thuật và trách nhiệm trên.', 'I have read and agree to all commitments.'))}</div>
+    </div>
+    ${fld(L('Ý kiến khác / Ghi chú thêm (tùy chọn)', 'Other comments (optional)'), inp('commitNote'))}
+    <div class="row" style="margin-top:16px;">
+      <button class="btn primary" data-act="appSend">${bt('send', L('Xác nhận & Nộp hồ sơ', 'Submit application'))}</button>
+    </div>
+  `);
+
+  const head_ = staffRole && ['screening', 'passed_to_presentation'].includes(a.status) ? `${a.status === 'passed_to_presentation' ? `<button class="btn primary" data-act="appStep" data-to="approved">${bt('check', L('Phê duyệt', 'Approve'))}</button>` : ''}<button class="btn danger" data-act="appStep" data-to="rejected">${bt('close', L('Không phê duyệt', 'Decline'))}</button>` : '';
+  const act = sec(L('Xử lý hồ sơ', 'Handle application'), `<div class="row">${head_}${staffRole && ['submitted', 'screening', 'passed_to_presentation'].includes(a.status) ? `<button class="btn" data-act="appNote">${bt('edit_note', L('Thêm ghi chú thẩm định', 'Add note'))}</button>` : ''}${a.status === 'approved' && ['head', 'admin'].includes(u.role) ? `<button class="btn" data-act="appFan">${bt('campaign', a.fanpage ? L('Đã đăng trên Facebook IAS (cập nhật)', 'Posted on FB (update)') : L('Đánh dấu đã đăng trên Facebook IAS', 'Mark posted on FB'))}</button>` : ''}</div>`);
+
+  return `${hd(esc(a.title || L('Hồ sơ mới', 'New application')), `<span class="mono">${a.code}</span> · ${esc(ow.name)}${a.proxy ? ' · ' + L('nhập thay bởi', 'proxy') + ' ' + esc(a.proxy) : ''}`, `<a href="#/${u.role === 'author' ? 'apply' : 'board/applications'}">${L('Hồ sơ', 'Applications')}</a> ${ic('chevron_right')}`)}
+  <div class="row">${ast(a.status)}${a.cycle ? `<span class="tag info">${L('Đợt xét', 'Round')} ${a.cycle}</span>` : ''}${a.fanpage ? `<span class="tag ok">${L('Đã đăng Facebook IAS', 'On Fanpage')} · ${fmt(a.fanpage.at)}</span>` : ''}</div>
+  ${draft ? form : readOnly}
+  ${staffRole ? act : ''}
+  ${staffRole && a.notes && a.notes.length ? sec(L('Ghi chú thẩm định nội bộ', 'Internal screening notes'), `<ul class="tl">${a.notes.map(x => `<li><span class="muted">${fmt(x.t, 1)} · ${esc(x.by)}</span><span>${esc(x.text)}</span></li>`).join('')}</ul>`) : ''}
+  ${a.decision ? sec(L('Quyết định xét duyệt', 'Decision'), `<div>${ast(a.decision.result)} <span class="small muted">${fmt(a.decision.at, 1)} · ${esc(a.decision.by)}</span></div>${a.decision.note ? `<div class="small">${esc(a.decision.note)}</div>` : ''}`) : ''}
+  ${sec(L('Dòng thời gian', 'Timeline'), `<ul class="tl">${(a.history || []).slice().reverse().map(h => `<li><span class="muted">${fmt(h.t, 1)}</span><span>${P(AST[h.to])}${h.note ? ' · ' + esc(h.note) : ''}</span></li>`).join('') || '<li><span></span><span class="muted">—</span></li>'}</ul>`)}
+  ${(u.role === 'author' && a.userId === u.id || u.role === 'admin') && ['draft', 'submitted', 'screening', 'passed_to_presentation'].includes(a.status) ? `<div><button class="btn danger" data-act="appWd" data-id="${a.id}">${bt('undo', L('Rút hồ sơ', 'Withdraw'))}</button></div>` : ''}
+  ${a.status === 'rejected' && u.role === 'author' ? note(L('Hồ sơ không được phê duyệt. Ứng viên có thể nộp hồ sơ mới.', 'Application was declined. You may submit a new one.'), 'warn') : ''}`;
+});
+
+ACT.appSend = () => run(() => {
+  API.appSubmit(BIND.obj, me());
+  toast('Đã nộp hồ sơ đăng ký thành công!');
+  render();
+});
+ACT.appWd = a => run(async () => {
+  const r = await ask({ title: L('Rút hồ sơ?', 'Withdraw?'), ok: L('Rút hồ sơ', 'Withdraw'), danger: true });
+  if (!r) return;
+  API.appMove(DB.apps.find(x => x.id === a.dataset.id), 'withdrawn', me(), '');
+  render();
+});
+ACT.appStep = a => run(async () => {
+  const to = a.dataset.to; let note = '';
+  if (['rejected', 'approved', 'passed_to_presentation'].includes(to)) {
+    const r = await ask({
+      title: to === 'approved' ? L('Phê duyệt hồ sơ', 'Approve') : (to === 'rejected' ? L('Không phê duyệt hồ sơ', 'Decline') : L('Thông qua trình bày', 'Pass to presentation')),
+      fields: [{ id: 'n', label: to === 'rejected' ? L('Lý do (bắt buộc)', 'Reason') : L('Ghi chú (tùy chọn)', 'Note'), type: 'textarea', req: to === 'rejected' }],
+      ok: L('Xác nhận', 'Confirm'), danger: to === 'rejected'
+    });
+    if (!r) return;
+    note = r.n;
+  }
+  API.appMove(BIND.obj, to, me(), note);
+  toast('Đã cập nhật trạng thái hồ sơ!');
+  render();
+});
+ACT.appNote = () => run(async () => {
+  const r = await ask({ title: L('Ghi chú thẩm định', 'Note'), fields: [{ id: 'n', label: L('Nội dung', 'Content'), type: 'textarea', req: true }], ok: L('Lưu ghi chú', 'Save') });
+  if (!r) return;
+  BIND.obj.notes = BIND.obj.notes || [];
+  BIND.obj.notes.push({ t: now(), by: me().email, text: r.n });
+  audit('app:note', { actor: me(), target: BIND.obj.code });
+  render();
+});
+ACT.appFan = () => run(() => {
+  BIND.obj.fanpage = { at: now(), by: me().email };
+  audit('app:fanpage', { actor: me(), target: BIND.obj.code });
+  toast('Đã ghi nhận: đã đăng trên Facebook IAS.');
+  render();
+});
+
+let BF = 'all';
+on(/^#\/board\/applications$/, (m, u) => {
+  if (!u) return authGate();
+  const apps = Array.isArray(DB.apps) ? DB.apps : [];
+  const list = apps.filter(a => a && (BF === 'all' || a.status === BF)).sort((a, b) => (b.stateSince||0) - (a.stateSince||0));
+  const nc = typeof nextCycle === 'function' ? nextCycle(now()) : { label: '—' };
+  const cyc = {}; apps.filter(a => a && a.cycle).forEach(a => { cyc[a.cycle] = (cyc[a.cycle] || 0) + 1; });
+  return `${hd('Hồ sơ Đăng ký Lập Dự án', 'Project Applications')}
+  ${note(`${L('Đợt xét kế tiếp', 'Next review round')}: <b>${nc.label}</b> · ${L('Số hồ sơ theo đợt', 'Per round')}: ${Object.entries(cyc).map(([k, v]) => `${k}: ${v}`).join(', ') || '—'}`)}
+  <div class="tabs">${[['all', L('Tất cả', 'All')], ...Object.keys(AST).map(k => [k, P(AST[k])])].map(([k, t]) => `<button class="${BF === k ? 'on' : ''}" data-act="bf" data-k="${k}">${t}</button>`).join('')}</div>
+  <div class="sec">
+    <div class="tw">
+      <table>
+        <thead><tr><th>Mã HS</th><th>Tên dự án</th><th>Chủ nhiệm</th><th>Đợt xét</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+        <tbody>
+          ${list.map(a => {
+            const ow = appOwner(a);
+            const ap = a.applicant || {};
+            return `<tr>
+              <td class="mono">${a.code || '—'}</td>
+              <td><b>${esc(a.title || '—')}</b><br><span class="small muted">${esc(a.topic || '')}</span></td>
+              <td>${esc(ap.name || ow.name || '—')}<br><span class="small muted">${esc(ap.email || ow.email || '')}${ap.phone ? ' · ' + esc(ap.phone) : ''}</span></td>
+              <td>${a.cycle || '—'}</td>
+              <td>${ast(a.status || 'draft')}${a.fanpage ? ` <span class="tag ok">fanpage</span>` : ''}</td>
+              <td>
+                <div class="row" style="gap:4px;">
+                  <a class="btn sm" href="#/applications/${a.id}">Chi tiết</a>
+                  ${a.cvLink ? `<a class="btn sm" href="${esc(a.cvLink)}" target="_blank" rel="noopener noreferrer">CV</a>` : ''}
+                  ${a.planLink ? `<a class="btn sm" href="${esc(a.planLink)}" target="_blank" rel="noopener noreferrer">Kế hoạch</a>` : ''}
+                </div>
+              </td>
+            </tr>`;
+          }).join('') || '<tr><td colspan="6" class="muted">Chưa có hồ sơ nào ở mục này.</td></tr>'}
+        </tbody>
+      </table>
+    </div>
+  </div>`;
+}, ['admin', 'head', 'lead_editor', 'editor']);
+
+ACT.bf = a => { BF = a.dataset.k; render(); };
+
+on(/^#\/me$/,()=>{const u=me();if(!u)return authGate();
+const mine=DB.subs.filter(s=>s.authorId===u.id);
+const myApps=DB.apps.filter(a=>a.userId===u.id);
+return `${hd(L('Quản lý bài nộp & Dự án','My Submissions & Projects'),null)}
+<div class="sec"><h3>Bài nghiên cứu</h3>${mine.map(s=>`<div class="item"><div class="row sp"><b>${esc(s.title||'(Chưa có tiêu đề)')}</b>${st(s.status)}</div><span class="small muted mono">${s.code}</span></div>`).join('')||'<p class="muted">Bạn chưa có bài nộp nào.</p>'}</div>
+<div class="sec"><h3>Hồ sơ đăng ký dự án</h3>${myApps.map(a=>`<div class="item"><div class="row sp"><b>${esc(a.title)}</b>${ast(a.status)}</div><span class="small muted mono">${a.code}</span></div>`).join('')||'<p class="muted">Bạn chưa đăng ký dự án nào.</p>'}</div>`});
+
+on(/^#\/editor$/,()=>{const u=me();if(!u||(!ED.includes(u.role)&&u.role!=='admin'))return denied();
+return `${hd(L('Hàng đợi biên tập','Editorial Queue'),null)}
+<div class="sec"><div class="tw"><table><thead><tr><th>Mã</th><th>Tiêu đề</th><th>Trạng thái</th><th>Tác giả</th></tr></thead><tbody>${DB.subs.map(s=>`<tr><td class="mono">${s.code}</td><td><b>${esc(s.title)}</b></td><td>${st(s.status)}</td><td>${esc(authorU(s)?.name||'')}</td></tr>`).join('')||'<tr><td colspan="4" class="muted">Hàng đợi rỗng.</td></tr>'}</tbody></table></div></div>`});
+
+on(/^#\/admin\/users$/,()=>{const u=me();if(!u||u.role!=='admin')return denied();
+return `${hd('Quản trị Người dùng & Phân quyền','User Management')}
+${cfgTabs('users', u)}
+<div class="sec">
+  <div class="row sp">
+    <b>Danh sách tài khoản nhân sự và tác giả</b>
+    <button class="btn primary sm" data-act="usrNew">+ Thêm tài khoản</button>
+  </div>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Họ và tên</th><th>Email</th><th>Cơ quan</th><th>Vai trò</th><th>Thao tác</th></tr></thead>
+      <tbody>
+        ${DB.users.map(x=>`
+          <tr>
+            <td><b>${esc(x.name)}</b></td>
+            <td>${esc(x.email)}</td>
+            <td>${esc(x.aff||'—')}</td>
+            <td><span class="tag info">${P(ROLE[x.role]||[x.role,x.role])}</span></td>
+            <td>
+              <button class="btn sm" data-act="usrEdit" data-id="${x.id}">Sửa</button>
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  </div>
+</div>`},['admin']);
+
+ACT.usrNew=()=>{
+  ask({
+    title:'Tạo tài khoản mới',
+    fields:[
+      {id:'n',label:'Họ và tên',req:true},
+      {id:'e',label:'Email',type:'email',req:true},
+      {id:'r',label:'Vai trò (admin / editor / lead_editor / head / author)',val:'editor',req:true},
+      {id:'p',label:'Mật khẩu khởi tạo',val:'IAS-123456',req:true}
+    ],
+    ok:'Tạo tài khoản'
+  }).then(r=>{
+    if(!r)return;
+    API.userSave(me(),{name:r.n,email:r.e,role:r.r,pw:r.p});
+    toast('Đã tạo tài khoản thành công!');
+    render();
+  });
+};
+
+ACT.usrEdit=(a)=>{
+  const x=DB.users.find(u=>u.id===a.dataset.id);if(!x)return;
+  ask({
+    title:'Chỉnh sửa tài khoản',
+    fields:[
+      {id:'n',label:'Họ và tên',val:x.name,req:true},
+      {id:'r',label:'Vai trò (admin / editor / lead_editor / head / author)',val:x.role,req:true},
+      {id:'p',label:'Đặt lại mật khẩu (để trống nếu không đổi)',val:''}
+    ],
+    ok:'Cập nhật'
+  }).then(r=>{
+    if(!r)return;
+    API.userSave(me(),{id:x.id,name:r.n,role:r.r,email:x.email,pw:r.p||undefined});
+    toast('Đã cập nhật tài khoản!');
+    render();
+  });
+};
+
+let CEDIT=null;
+on(/^#\/admin\/calls$/,()=>{const u=me();if(!u||(!ED.includes(u.role)&&u.role!=='admin'))return denied();
+BIND={obj:{CEDIT:CEDIT||{}}};
+return `${hd('Cấu hình Đợt nộp bài (Chi tiết)','Call Configuration (Detailed)')}
+${cfgTabs('calls', u)}
+<div class="sec">
+  <div class="row sp" style="margin-bottom:12px;">
+    <b>Danh sách các đợt nhận bài</b>
+    ${!CEDIT?`<button class="btn primary sm" data-act="callNew">+ Thêm đợt mới</button>`:''}
+  </div>
+  ${CEDIT?`
+    <div class="box" style="margin-bottom:16px;">
+      <h4>${CEDIT.id?'Chỉnh sửa chi tiết đợt nộp':'Tạo đợt nộp mới'}</h4>
+      <div class="two">
+        ${fld('Tên đợt (Tiếng Việt)',inp('CEDIT.t0'),null,true)}
+        ${fld('Tên đợt (Tiếng Anh)',inp('CEDIT.t1'))}
+      </div>
+      <div class="two">
+        ${fld('Tên đường dẫn (Slug)',inp('CEDIT.slug'),'Dùng trong URL, ví dụ: shcm-2026',true)}
+        ${fld('Loại bài áp dụng',sel('CEDIT.typeKey',DB.types.map(t=>[t.key,P(t.name)+' · '+P(MODE[t.mode])])))}
+      </div>
+      <div class="three">
+        ${fld('Trạng thái',sel('CEDIT.status',[['open','Đang mở'],['closed','Đã đóng'],['coming_soon','Sắp mở']]))}
+        ${fld('Phạm vi / Lĩnh vực',inp('CEDIT.scope'))}
+        ${fld('Lịch công bố dự kiến',inp('CEDIT.schedule'))}
+      </div>
+      <div class="two">
+        ${fld('Ngày mở đợt',inp('CEDIT.opens',{type:'date'}))}
+        ${fld('Hạn đóng đợt',inp('CEDIT.closes',{type:'date'}),'Để trống: mở liên tục')}
+      </div>
+      <div class="two">
+        ${fld('Hạn đăng ký đề tài (nếu có)',inp('CEDIT.abstractDeadline',{type:'date'}))}
+        ${fld('Hạn nộp toàn văn',inp('CEDIT.fulltextDeadline',{type:'date'}))}
+      </div>
+      <div class="two">
+        ${fld('Thời gian phản biện (ngày)',inp('CEDIT.reviewDays',{type:'number'}))}
+        ${fld('Số phản biện viên tối thiểu (ghi đè)',inp('CEDIT.minOverride',{type:'number'}),'Để trống: dùng theo loại bài')}
+      </div>
+      ${fld('Liên kết nhận bài ngoài (nếu chuyển hướng)',inp('CEDIT.externalUrl',{ph:'https://...'}))}
+      <div class="two">
+        ${fld('Mô tả (Tiếng Việt)',txa('CEDIT.d0',{rows:2}))}
+        ${fld('Mô tả (Tiếng Anh)',txa('CEDIT.d1',{rows:2}))}
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button class="btn primary" data-act="callSave">Lưu thay đổi</button>
+        <button class="btn" data-act="callCancel">Hủy</button>
+      </div>
+    </div>
+  `:''}
+  <div class="tw">
+    <table>
+      <thead><tr><th>Tên đợt</th><th>Slug</th><th>Loại bài</th><th>Thời gian</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+      <tbody>
+        ${DB.calls.map(c=>`
+          <tr>
+            <td><b>${P(c.title)}</b></td>
+            <td class="mono">${c.slug}</td>
+            <td class="small">${P(typeOf(c.typeKey)?.name||'')}</td>
+            <td class="small">${c.opens?fmt(c.opens):'—'} → ${c.closes?fmt(c.closes):'Mở suốt'}</td>
+            <td><span class="tag ${c.status==='open'?'ok':c.status==='closed'?'bad':'warn'}">${P(CALLST[c.status]||[c.status,c.status])}</span></td>
+            <td>
+              <button class="btn sm" data-act="callEdit" data-id="${c.id}">Sửa chi tiết</button>
+              ${u.role==='admin'?`<button class="btn sm danger" data-act="callDel" data-id="${c.id}">Xóa</button>`:''}
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  </div>
+</div>`},['admin','lead_editor','editor']);
+
+ACT.callNew=()=>{
+  CEDIT={id:null,t0:'',t1:'',slug:'',typeKey:'shcm_full',status:'open',scope:'',opens:toIn(now()),closes:toIn(now()+60*DAY),abstractDeadline:'',fulltextDeadline:'',reviewDays:20,minOverride:'',schedule:'',externalUrl:'',d0:'',d1:''};
+  render();
+};
+
+ACT.callEdit=(a)=>{
+  const c=DB.calls.find(x=>x.id===a.dataset.id);
+  if(c){
+    CEDIT={
+      id:c.id,t0:c.title[0],t1:c.title[1]||c.title[0],slug:c.slug,typeKey:c.typeKey,status:c.status,scope:c.scope||'',
+      opens:toIn(c.opens),closes:toIn(c.closes),abstractDeadline:toIn(c.abstractDeadline),fulltextDeadline:toIn(c.fulltextDeadline),
+      reviewDays:c.reviewDays||20,minOverride:c.minOverride??'',schedule:c.schedule||'',externalUrl:c.externalUrl||'',
+      d0:c.desc?c.desc[0]:'',d1:c.desc?c.desc[1]:''
+    };
+    render();
+  }
+};
+
+ACT.callCancel=()=>{CEDIT=null;render()};
+ACT.callSave=()=>run(()=>{API.callSave(me(),CEDIT);CEDIT=null;toast('Đã lưu đợt nộp thành công!');render()});
+ACT.callDel=a=>run(async()=>{const r=await ask({title:'Xác nhận xóa đợt nộp?',ok:'Xóa vĩnh viễn'});if(!r)return;API.callDelete(me(),a.dataset.id);toast('Đã xóa đợt nộp!');render()});
+
+// --- ADMIN: GUIDES MANAGEMENT ---
+let GEDIT = null;
+on(/^#\/admin\/guides$/, () => {
+  const u = me(); if (!u || (!ED.includes(u.role) && u.role !== 'admin')) return denied();
+  BIND = { obj: { GEDIT: GEDIT || {} } };
+  return `${hd('Cấu hình · Hướng dẫn (Guides)', 'Quản lý nội dung văn bản hướng dẫn tác giả, người nộp dự án và phản biện.')}
+  ${cfgTabs('guides', u)}
+  ${GEDIT ? `
+    <div class="box" style="margin-bottom:16px;">
+      <h4>Chỉnh sửa nội dung: ${esc(P(GEDIT.title))}</h4>
+      <div class="two">
+        ${fld('Tiêu đề (Tiếng Việt)', inp('GEDIT.t0'), null, true)}
+        ${fld('Tiêu đề (Tiếng Anh)', inp('GEDIT.t1'))}
+      </div>
+      ${fld('Nội dung hướng dẫn (Tiếng Việt)', txa('GEDIT.b0', { rows: 8 }), 'Hỗ trợ định dạng xuống dòng và văn bản chuẩn.', true)}
+      ${fld('Nội dung hướng dẫn (Tiếng Anh)', txa('GEDIT.b1', { rows: 6 }))}
+      <div class="row" style="margin-top:10px;">
+        <button class="btn primary" data-act="guideSave">Lưu hướng dẫn</button>
+        <button class="btn" data-act="guideCancel">Hủy</button>
+      </div>
+    </div>
+  ` : ''}
+  <div class="tw">
+    <table>
+      <thead><tr><th>Mã định danh (Slug)</th><th>Tên tài liệu</th><th>Phiên bản</th><th>Cập nhật cuối</th><th>Thao tác</th></tr></thead>
+      <tbody>
+        ${DB.guides.map(g => `
+          <tr>
+            <td class="mono">${g.slug}</td>
+            <td><b>${esc(P(g.title))}</b></td>
+            <td><span class="tag info">v${g.version || 1}</span></td>
+            <td class="small muted">${fmt(g.updatedAt || now(), 1)}</td>
+            <td>
+              <button class="btn sm" data-act="guideEdit" data-slug="${g.slug}">Chỉnh sửa văn bản</button>
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  </div>`;
+}, ['admin', 'lead_editor', 'editor']);
+
+ACT.guideEdit = a => {
+  const g = DB.guides.find(x => x.slug === a.dataset.slug);
+  if (g) {
+    GEDIT = {
+      slug: g.slug,
+      t0: g.title[0],
+      t1: g.title[1] || g.title[0],
+      b0: Array.isArray(g.body) ? g.body[0] : g.body,
+      b1: Array.isArray(g.body) ? (g.body[1] || g.body[0]) : g.body,
+      version: (g.version || 1) + 1
+    };
+    render();
+  }
+};
+ACT.guideCancel = () => { GEDIT = null; render(); };
+ACT.guideSave = () => run(() => {
+  const g = DB.guides.find(x => x.slug === GEDIT.slug);
+  if (g) {
+    g.title = [GEDIT.t0, GEDIT.t1];
+    g.body = [GEDIT.b0, GEDIT.b1];
+    g.version = GEDIT.version;
+    g.updatedAt = now();
+    audit('guide:update', { actor: me(), target: g.slug, detail: 'v' + g.version });
+    toast('Đã cập nhật hướng dẫn thành công!');
+  }
+  GEDIT = null;
+  render();
+});
+
+// --- ADMIN: TERMS MANAGEMENT ---
+let TEDIT = null;
+let TF = 'all';
+on(/^#\/admin\/terms$/, () => {
+  const u = me(); if (!u || (!ED.includes(u.role) && u.role !== 'admin')) return denied();
+  BIND = { obj: { TEDIT: TEDIT || {} } };
+  const list = DB.terms.filter(t => TF === 'all' || t.scope === TF).sort((a,b)=>(a.order||0)-(b.order||0));
+  return `${hd('Cấu hình · Điều khoản cam kết & Thỏa thuận', 'Quản lý các điều khoản tác giả và chủ nhiệm dự án phải tích đồng ý khi nộp.')}
+  ${cfgTabs('terms', u)}
+  <div class="tabs" style="margin-bottom:12px;">
+    ${[['all', 'Tất cả điều khoản'], ['submission', 'Bài nộp (submission)'], ['project', 'Lập Dự án (project - 14 điều khoản)']].map(([k,t]) => `
+      <button class="${TF === k ? 'on' : ''}" data-act="tf" data-k="${k}">${t} (${DB.terms.filter(x => k==='all' || x.scope===k).length})</button>
+    `).join('')}
+  </div>
+  ${TEDIT ? `
+    <div class="box" style="margin-bottom:16px;">
+      <h4>${TEDIT.id ? 'Sửa điều khoản' : 'Thêm điều khoản mới'}</h4>
+      <div class="two">
+        ${fld('Phạm vi áp dụng', sel('TEDIT.scope', [['submission', 'Bài nộp nghiên cứu (submission)'], ['project', 'Đăng ký lập Dự án (project)']]))}
+        ${fld('Thứ tự hiển thị', inp('TEDIT.order', { type: 'number' }))}
+      </div>
+      ${fld('Nội dung cam kết (Tiếng Việt)', txa('TEDIT.vi', { rows: 3 }), null, true)}
+      ${fld('Nội dung cam kết (Tiếng Anh)', txa('TEDIT.en', { rows: 3 }))}
+      ${fld('Liên kết xem toàn văn (nếu có)', inp('TEDIT.link', { ph: '#/privacy hoặc #/grant hoặc link ngoài' }))}
+      <div class="row" style="margin-top:10px;">
+        <button class="btn primary" data-act="termSave">Lưu điều khoản</button>
+        <button class="btn" data-act="termCancel">Hủy</button>
+      </div>
+    </div>
+  ` : ''}
+  <div class="row sp" style="margin-bottom:12px;">
+    <b>Danh sách các điều khoản cam kết đang hoạt động</b>
+    ${!TEDIT ? `<button class="btn primary sm" data-act="termNew">+ Thêm điều khoản</button>` : ''}
+  </div>
+  <div class="tw">
+    <table>
+      <thead><tr><th>#</th><th>Phạm vi</th><th>Nội dung điều khoản (Tiếng Việt)</th><th>Liên kết</th><th>Thao tác</th></tr></thead>
+      <tbody>
+        ${list.map(t => `
+          <tr>
+            <td>${t.order || 1}</td>
+            <td><span class="tag info">${t.scope === 'project' ? 'Lập dự án' : 'Bài nộp'}</span></td>
+            <td><b>${esc(t.vi)}</b><br><span class="small muted">${esc(t.en || '')}</span></td>
+            <td class="small mono">${t.link ? `<a href="${esc(t.link)}" target="_blank">${esc(t.link)}</a>` : '—'}</td>
+            <td>
+              <button class="btn sm" data-act="termEdit" data-id="${t.id}">Sửa</button>
+              <button class="btn sm danger" data-act="termDel" data-id="${t.id}">Xóa</button>
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  </div>`;
+}, ['admin', 'lead_editor', 'editor']);
+
+ACT.tf = a => { TF = a.dataset.k; render(); };
+ACT.termNew = () => {
+  TEDIT = { id: null, scope: TF === 'project' ? 'project' : 'submission', vi: '', en: '', link: '', order: DB.terms.length + 1 };
+  render();
+};
+ACT.termEdit = a => {
+  const t = DB.terms.find(x => x.id === a.dataset.id);
+  if (t) {
+    TEDIT = { ...t };
+    render();
+  }
+};
+ACT.termCancel = () => { TEDIT = null; render(); };
+ACT.termSave = () => run(() => {
+  if (!TEDIT.vi) fail('Vui lòng nhập nội dung điều khoản.', 'Term text required.');
+  let cur = DB.terms.find(x => x.id === TEDIT.id);
+  if (cur) {
+    Object.assign(cur, TEDIT);
+    audit('term:update', { actor: me(), target: cur.id });
+  } else {
+    const nt = { ...TEDIT, id: uid('t'), active: true };
+    DB.terms.push(nt);
+    audit('term:create', { actor: me(), target: nt.id });
+  }
+  toast('Đã lưu điều khoản!');
+  TEDIT = null;
+  render();
+});
+ACT.termDel = a => run(async () => {
+  const r = await ask({ title: 'Xác nhận xóa điều khoản này?', ok: 'Xóa vĩnh viễn' });
+  if (!r) return;
+  const idx = DB.terms.findIndex(x => x.id === a.dataset.id);
+  if (idx >= 0) {
+    DB.terms.splice(idx, 1);
+    audit('term:delete', { actor: me(), target: a.dataset.id });
+    toast('Đã xóa điều khoản!');
+    render();
+  }
+});
+
+on(/^#\/guide(?:\/(.+))?$/, (m, u) => {
+  const slug = (m && m[1]) || 'guide-authors';
+  const g = DB.guides.find(x => x.slug === slug) || DB.guides[0];
+  if (!g) return notFound();
+  return `${hd(esc(P(g.title)), `Phiên bản v${g.version || 1} · Cập nhật: ${fmt(g.updatedAt || now(), 1)}`)}
+  <div class="tabs" style="margin-bottom:14px;">
+    ${DB.guides.map(x => `<a class="btn sm ${x.slug === g.slug ? 'primary' : ''}" href="#/guide/${x.slug}">${esc(P(x.title))}</a>`).join('')}
+  </div>
+  <div class="sec">
+    <div style="line-height:1.7;white-space:pre-wrap;">${esc(Array.isArray(g.body) ? (lang === 'vi' ? g.body[0] : (g.body[1] || g.body[0])) : g.body)}</div>
+    ${u && (u.role === 'admin' || ED.includes(u.role)) ? `
+      <div class="row" style="margin-top:16px;">
+        <a class="btn sm" href="#/admin/guides">${bt('edit', 'Chỉnh sửa nội dung hướng dẫn này')}</a>
+      </div>
+    ` : ''}
+  </div>`;
+});
+
+on(/^#\/grant$/, () => {
+  return `${hd(L('Thỏa thuận cấp quyền sử dụng của IAS', 'IAS Grant Agreement'), L('Văn bản thỏa thuận quyền tác giả và cấp quyền sử dụng tác phẩm phi thương mại', 'Copyright and non-commercial license agreement'))}
+  <div class="sec">
+    <div style="line-height:1.7;white-space:pre-line;font-size:14px;">
+      1. Tác giả giữ toàn bộ quyền nhân thân và quyền tài sản đối với công trình nghiên cứu theo quy định của pháp luật sở hữu trí tuệ.
+      
+      2. Tác giả đồng ý cấp cho Ingene Academic Society (IAS) quyền sử dụng phi độc quyền, không thu phí bản quyền để:
+      - Lưu trữ bản thảo toàn văn trong Cơ sở dữ liệu học thuật của IAS.
+      - Phổ biến, chia sẻ phục vụ mục đích học tập, nghiên cứu và phát triển cộng đồng phi lợi nhuận.
+      - Xuất bản trên các ấn phẩm, website và kỷ yếu học thuật của IAS theo giấy phép Creative Commons (CC) mà tác giả đã lựa chọn.
+      
+      3. Tác giả cam đoan công trình không vi phạm quyền sở hữu trí tuệ của bất kỳ bên thứ ba nào khác.
+    </div>
+  </div>`;
+});
+
+on(/^#\/admin\/audit$/,()=>`${hd(L('Nhật ký kiểm toán','Audit Log'),null)}
+${cfgTabs('audit', me())}
+<div class="sec"><div class="tw"><table><thead><tr><th>#</th><th>Actor</th><th>Action</th><th>Target</th><th>Thời gian</th></tr></thead><tbody>${DB.audit.slice(-40).reverse().map(r=>`<tr><td>${r.n}</td><td>${esc(r.actor)}</td><td>${esc(r.action)}</td><td>${esc(r.target)}</td><td>${fmt(r.t,1)}</td></tr>`).join('')}</tbody></table></div></div>`,['admin','head']);
+
+on(/^#\/mailbox$/,()=>`${hd(L('Hộp thư thông báo','Notifications'),null)}<div class="sec">${DB.mails.map(m=>`<div class="box"><b>${esc(m.vi.subject)}</b><div class="small muted">Gửi đến: ${esc(m.to)}</div><div class="mail">${esc(m.vi.body)}</div></div>`).join('')||'<p class="muted">Không có thư thông báo nào.</p>'}</div>`);
+
+function seed(){
+  Object.assign(DB.settings, SETTINGS0);
+
+  DB.users = [
+    {
+      id: 'u_admin',
+      role: 'admin',
+      name: 'Quản trị viên',
+      email: 'admin@ias.vn',
+      aff: 'IAS · Quản trị',
+      pw: H('IAS-Admin-2026'),
+      created: now()
+    },
+    {
+      id: 'u_ed',
+      role: 'editor',
+      name: 'Biên tập viên',
+      email: 'editor@ias.vn',
+      aff: 'IAS · Ban biên tập',
+      pw: H('IAS-Editor-2026'),
+      created: now()
+    }
+  ];
+
+  DB.types = [
+    {
+      key: 'ias_view',
+      name: ['IAS View', 'IAS View'],
+      who: 'members',
+      mode: 'single_blind',
+      min: 1,
+      rounds: 1,
+      words: 3500,
+      langs: ['vi', 'en'],
+      abstract: false,
+      active: true
+    },
+    {
+      key: 'forum',
+      name: ['Forum (đang phát triển)', 'Forum (in development)'],
+      who: 'everyone',
+      mode: 'none',
+      min: 0,
+      rounds: 1,
+      words: 3000,
+      langs: ['vi', 'en'],
+      abstract: false,
+      active: true
+    },
+    {
+      key: 'shcm_full',
+      name: ['Sinh hoạt chuyên môn · Bài đầy đủ', 'Academic Conference · Full Paper'],
+      who: 'everyone',
+      mode: 'double_blind',
+      min: 2,
+      rounds: 1,
+      words: 6000,
+      langs: ['vi', 'en'],
+      abstract: false,
+      active: true
+    },
+    {
+      key: 'shcm_outline',
+      name: ['Sinh hoạt chuyên môn · Đề cương', 'Academic Conference · Outline'],
+      who: 'everyone',
+      mode: 'none',
+      min: 0,
+      rounds: 1,
+      words: 2000,
+      langs: ['vi', 'en'],
+      abstract: false,
+      active: true
+    },
+    {
+      key: 'event',
+      name: ['Bài hội nghị, sự kiện (Có đăng ký đề tài)', 'Conference / Event Paper'],
+      who: 'everyone',
+      mode: 'double_blind',
+      min: 1,
+      rounds: 2,
+      words: 6500,
+      langs: ['vi', 'en'],
+      abstract: true,
+      active: true
+    }
+  ];
+
+  DB.calls = [
+    hydrateCall({
+      ...emptyCall(),
+      id: 'c1',
+      slug: 'shcm-2026',
+      typeKey: 'shcm_full',
+      title: ['Sinh hoạt chuyên môn 2026', 'Academic Conference 2026'],
+      desc: ['Đợt nộp các công trình khoa học năm 2026.', 'Call for scientific papers 2026.'],
+      scope: 'Khoa học quản lý, chính sách, kinh tế, xã hội',
+      status: 'open',
+      opens: now() - DAY,
+      closes: now() + 60 * DAY,
+      reviewDays: 20
+    })
+  ];
+
+  DB.guides = [
+    {
+      slug: 'guide-authors',
+      scope: 'global',
+      title: ['Hướng dẫn cho tác giả (Guide for Authors)', 'Guide for Authors'],
+      version: 1,
+      updatedAt: now(),
+      body: [
+        '1. Quy chuẩn bản thảo:\n- Bản thảo soạn theo định dạng .docx theo mẫu của IAS, trích dẫn chuẩn IEEE.\n- Tóm tắt từ 150-300 từ, từ khóa 3-5 từ.\n\n2. Quy tắc phản biện ẩn danh (Double-blind):\n- Tác giả không để lộ tên, cơ quan, chức vụ hoặc lời cảm ơn bên trong tệp bản thảo.\n- Toàn bộ thông tin định danh sẽ được bảo mật tuyệt đối trên hệ thống IAS Portal.\n\n3. Đăng ký đề tài & Nộp toàn văn:\n- Với các sự kiện có bước Đăng ký đề tài, tác giả gửi Abstract trước để Ban biên tập tiếp nhận trong 5 ngày làm việc, sau đó mới nộp toàn văn.',
+        '1. Manuscript Guidelines:\n- Submit in .docx format following the IAS template and IEEE citation style.\n- Abstract between 150-300 words, 3-5 keywords.\n\n2. Double-blind Peer Review:\n- Do not include author names, affiliations, or acknowledgements in the manuscript text.\n- Identifying metadata is securely stored on the IAS Portal.'
+      ]
+    },
+    {
+      slug: 'guide-project',
+      scope: 'project_application',
+      title: ['Hướng dẫn đăng ký lập Dự án nghiên cứu', 'Project Application Guide'],
+      version: 1,
+      updatedAt: now(),
+      body: [
+        '1. Đối tượng và tiêu chí:\n- Sinh viên, thanh niên, nhà nghiên cứu trẻ mong muốn chủ trì dự án học thuật độc lập.\n\n2. Hồ sơ cần chuẩn bị:\n- Lý lịch khoa học chủ nhiệm (CV) cập nhật.\n- Đề cương sơ bộ / Kế hoạch tổ chức thực hiện 12 tháng.\n- Kế hoạch nhu cầu nhân sự (nếu có tuyển thành viên).\n\n3. Quy trình xét duyệt:\n- Hồ sơ được tiếp nhận liên tục và thẩm định theo các đợt định kỳ. Chủ nhiệm Dự án phê duyệt kết quả.',
+        '1. Target Applicants:\n- Students and young researchers wishing to lead independent academic projects.\n\n2. Required Documents:\n- Academic CV of the project lead.\n- Preliminary 12-month implementation plan.\n- Staffing needs report.'
+      ]
+    },
+    {
+      slug: 'guide-reviewers',
+      scope: 'reviewer',
+      title: ['Hướng dẫn dành cho Phản biện viên', 'Reviewer Guide'],
+      version: 1,
+      updatedAt: now(),
+      body: [
+        '1. Tiêu chí đánh giá:\n- Tính cấp thiết và ý nghĩa thực tiễn của công trình.\n- Tính mới và sự không trùng lặp.\n- Độ tin cậy và phương pháp nghiên cứu.\n- Kết quả và những đóng góp mới.\n- Hạn chế và khuyến nghị hoàn thiện.\n\n2. Bảo mật học thuật:\n- Phản biện viên cam kết bảo mật nội dung công trình và không đưa bản thảo vào các công cụ AI công cộng.',
+        '1. Evaluation Criteria:\n- Relevance and practical significance.\n- Originality and novelty.\n- Methodological validity.\n- Scientific contributions.'
+      ]
+    }
+  ];
+
+  DB.terms = [
+    { id: 't_sub1', scope: 'submission', vi: 'Tác giả cam kết công trình là nghiên cứu trung thực, không sao chép, đạo văn hoặc giả mạo dữ liệu.', en: 'Authors declare originality and no plagiarism.', link: '', order: 1, active: true },
+    { id: 't_sub2', scope: 'submission', vi: 'Công trình chưa từng được công bố hoặc đang trong quá trình xét duyệt ở bất kỳ tạp chí / hội nghị nào khác.', en: 'The work is unpublished and not under consideration elsewhere.', link: '', order: 2, active: true },
+    { id: 't_sub3', scope: 'submission', vi: 'Tác giả đồng thuận cấp quyền sử dụng phi độc quyền cho IAS để phục vụ lưu trữ học thuật và phổ biến tri thức phi lợi nhuận.', en: 'Authors grant non-exclusive usage rights to IAS.', link: '#/grant', order: 3, active: true },
+    { id: 'p_t1', scope: 'project', vi: 'Tôi cam kết dành tối thiểu 3 giờ mỗi tuần cho Dự án trong suốt thời gian thực hiện (6 hoặc 12 tháng).', en: 'I commit at least 3 hours a week to the Project.', link: '', order: 1, active: true },
+    { id: 'p_t2', scope: 'project', vi: 'Tôi hiểu Chủ nhiệm Dự án chịu trách nhiệm điều phối nhóm, theo dõi tiến độ và hoàn thành các sản phẩm đầu ra theo yêu cầu của IAS.', en: 'I understand the Project lead is responsible for coordinating the team.', link: '', order: 2, active: true },
+    { id: 'p_t3', scope: 'project', vi: 'Nếu cần thêm thành viên, tôi cam kết tổ chức tuyển sau khi Dự án được phê duyệt, giao việc rõ ràng và bảo đảm quỹ thời gian của thành viên.', en: 'If recruiting members, I will assign work clearly and protect their time.', link: '', order: 3, active: true },
+    { id: 'p_t4', scope: 'project', vi: 'Tôi cam kết tham gia các buổi Sinh hoạt chuyên môn theo kế hoạch và báo cáo tiến độ khi được yêu cầu.', en: 'I commit to join professional meetings and report progress.', link: '', order: 4, active: true },
+    { id: 'p_t5', scope: 'project', vi: 'Tôi cam kết thông báo sớm cho Ban tổ chức khi có khó khăn có thể ảnh hưởng đến tiến độ, không chờ đến sát hạn.', en: 'I will report difficulties early, not wait until deadline.', link: '', order: 5, active: true },
+    { id: 'p_t6', scope: 'project', vi: 'Tôi hiểu Dự án có thể bị dừng nếu không bảo đảm chất lượng và tiến độ đã thỏa thuận.', en: 'I understand the project may be stopped if quality is not met.', link: '', order: 6, active: true },
+    { id: 'p_i1', scope: 'project', vi: 'Tôi cam đoan các thông tin trong hồ sơ là trung thực.', en: 'I declare the information in the application is truthful.', link: '', order: 7, active: true },
+    { id: 'p_i2', scope: 'project', vi: 'Tôi cam kết nghiên cứu là công trình của nhóm, không sao chép hay đạo văn, trích dẫn đầy đủ và đúng nguồn theo quy định của IAS.', en: 'No plagiarism, cite all sources properly.', link: '', order: 8, active: true },
+    { id: 'p_i3', scope: 'project', vi: 'Tôi cam kết không bịa đặt hoặc làm sai lệch dữ liệu, kết quả nghiên cứu.', en: 'No fabrication or falsification of data.', link: '', order: 9, active: true },
+    { id: 'p_i4', scope: 'project', vi: 'Khi dùng công cụ trí tuệ nhân tạo, tôi sẽ tuyên bố phạm vi sử dụng và chịu trách nhiệm về nội dung.', en: 'Disclose AI tools usage and take responsibility.', link: '', order: 10, active: true },
+    { id: 'p_i5', scope: 'project', vi: 'Nếu nghiên cứu có khảo sát hoặc phỏng vấn người tham gia, tôi cam kết nêu rõ mục đích, xin sự đồng ý và bảo mật thông tin cá nhân của họ.', en: 'Informed consent and privacy protection for human subjects.', link: '', order: 11, active: true },
+    { id: 'p_i6', scope: 'project', vi: 'Tôi đã đọc và đồng ý các nguyên tắc về quyền tác giả và quyền sử dụng của IAS đối với sản phẩm nghiên cứu.', en: 'Accept IAS authorship and usage rights principles.', link: '', order: 12, active: true },
+    { id: 'p_13', scope: 'project', vi: 'Tôi hiểu và đồng ý rằng IAS được sử dụng không độc quyền các sản phẩm của Dự án để lưu trữ, truyền đạt đến người học và phục vụ cộng đồng, không thu lợi nhuận; tác giả vẫn giữ quyền tác giả.', en: 'IAS non-exclusive usage grant, author retains copyright.', link: '#/grant', order: 13, active: true },
+    { id: 'p_14', scope: 'project', vi: 'Tôi đồng thuận để IAS xử lý dữ liệu cá nhân (họ tên, email, số điện thoại, đơn vị đào tạo, hồ sơ) phục vụ công tác xét duyệt và quản lý Dự án.', en: 'Consent to personal data processing by IAS.', link: '', order: 14, active: true }
+  ];
+}
+
+function initAll(){
+  ['users','types','calls','subs','apps','mails','audit'].forEach(k=>DB[k].length=0);
+  seed();
+}
+function boot(){initAll();render()}
+
+const SYNC_ARR=['users','types','calls','subs','apps','mails','audit','guides','terms'];
+function syncSnapshot(){return JSON.stringify({a:Object.fromEntries(SYNC_ARR.map(k=>[k,DB[k]])),seq:DB.seq,settings:DB.settings})}
+function syncApply(json){
+  const d=JSON.parse(json);
+  SYNC_ARR.forEach(k=>{
+    if(!DB[k]) DB[k]=[];
+    DB[k].length=0;
+    (d.a[k]||[]).forEach(x=>DB[k].push(x));
+  });
+  DB.seq=d.seq||{};
+  DB.settings=d.settings||{...SETTINGS0};
+
+  if(!DB.guides || DB.guides.length===0 || !DB.terms || DB.terms.length===0 || !DB.types || DB.types.length < 5){
+    seed();
+  }
+}
+
+boot();
+</script>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {getAuth,signInAnonymously} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {getDatabase,ref,get,set,onValue} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+const cfg={apiKey:"AIzaSyDiDeI3Q1p0s7TG8YkjycJZPOamka8t0LA",authDomain:"ias-portal-backup.firebaseapp.com",databaseURL:"https://ias-portal-backup-default-rtdb.asia-southeast1.firebasedatabase.app",projectId:"ias-portal-backup",storageBucket:"ias-portal-backup.firebasestorage.app",messagingSenderId:"201647944305",appId:"1:201647944305:web:0957842c00d31da11021d0"};
+const el=document.createElement('div');el.style.cssText='position:fixed;right:10px;bottom:10px;z-index:9999;font:12px system-ui;padding:4px 8px;border-radius:6px;background:#eef2f7;color:#2b3a4a;border:1px solid #cfd8e3';document.body.appendChild(el);
+const say=(t,bad)=>{el.textContent=t;el.style.background=bad?'#fde8e8':'#eef2f7'};
+const cid=Math.random().toString(36).slice(2);
+try{
+  say('Đang kết nối Cloud DB…');
+  const app=initializeApp(cfg);await signInAnonymously(getAuth(app));
+  const db=getDatabase(app),r=ref(db,'ias/state');
+  const first=await get(r);let last='',lastTs=0;
+  if(first.exists()){const v=first.val();syncApply(v.json);last=syncSnapshot();lastTs=v.ts;render()}
+  else{last=syncSnapshot();lastTs=Date.now();await set(r,{ts:lastTs,by:cid,json:last})}
+  say('Đã kết nối Cloud');
+  setInterval(async()=>{const cur=syncSnapshot();if(cur===last)return;try{const ts=Date.now();await set(r,{ts,by:cid,json:cur});last=cur;lastTs=ts}catch(e){say('Lỗi lưu cloud',true)}},3000);
+  onValue(r,snap=>{const v=snap.val();if(!v||v.by===cid||v.ts<=lastTs)return;syncApply(v.json);last=syncSnapshot();lastTs=v.ts;render()});
+}catch(e){console.error(e);say('Offline DB',true)}
+</script>
+</body>
+</html>
